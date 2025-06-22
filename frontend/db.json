@@ -1,230 +1,258 @@
 {
-  "user":{
+  "user": {
     "username": "admin",
     "password": "admin123"
   },
   "productos": [
-
-  {
-    "id": 1,
-    "nombre": "Royal Canin Urinary",
-    "categoria": "Alimento Balanceado",
-    "animal": "perro",
-    "precio": 30000.0,
-    "stock": 30
-  },
-  {
-    "id": 2,
-    "nombre": "Pro Plan Adulto Razas Medianas",
-    "categoria": "Alimento Balanceado",
-    "animal": "perro",
-    "precio": 28000.0,
-    "stock": 25
-  },
-  {
-    "id": 3,
-    "nombre": "Eukanuba Puppy Razas Grandes",
-    "categoria": "Alimento Balanceado",
-    "animal": "perro",
-    "precio": 29000.0,
-    "stock": 15
-  },
-
-  
-  {
-    "id": 4,
-    "nombre": "Royal Canin Sterilised",
-    "categoria": "Alimento Balanceado",
-    "animal": "gato",
-    "precio": 27000.0,
-    "stock": 20
-  },
-  {
-    "id": 5,
-    "nombre": "Whiskas Adulto Carne",
-    "categoria": "Alimento Balanceado",
-    "animal": "gato",
-    "precio": 12000.0,
-    "stock": 40
-  },
-  {
-    "id": 6,
-    "nombre": "Cat Chow Gatos Indoor",
-    "categoria": "Alimento Balanceado",
-    "animal": "gato",
-    "precio": 15000.0,
-    "stock": 30
-  },
-  {
-    "id": 7,
-    "nombre": "Bravecto 10-20kg",
-    "categoria": "Medicamento",
-    "animal": "perro",
-    "precio": 25000.0,
-    "stock": 10
-  },
-  {
-    "id": 8,
-    "nombre": "Advocate Gatos hasta 4kg",
-    "categoria": "Medicamento",
-    "animal": "gato",
-    "precio": 18000.0,
-    "stock": 12
-  },
-  {
-    "id": 9,
-    "nombre": "Antiparasitario Total Fullvet",
-    "categoria": "Medicamento",
-    "animal": "perro",
-    "precio": 8000.0,
-    "stock": 20
-  },
-  {
-    "id": 10,
-    "nombre": "Collar Antipulgas Bayer",
-    "categoria": "Accesorio",
-    "animal": "perro",
-    "precio": 9000.0,
-    "stock": 18
-  },
-  {
-    "id": 11,
-    "nombre": "Rascador para Gatos con Juguete",
-    "categoria": "Accesorio",
-    "animal": "gato",
-    "precio": 14000.0,
-    "stock": 8
-  },
-  {
-    "id": 12,
-    "nombre": "Cucha Plástica Mediana",
-    "categoria": "Accesorio",
-    "animal": "perro",
-    "precio": 20000.0,
-    "stock": 5
-  }
+    {
+      "id": "1",
+      "nombre": "Royal Canin Urinary",
+      "categoria": "Alimento Balanceado",
+      "animal": "perro",
+      "precio": 30000,
+      "stock": 30
+    },
+    {
+      "id": "2",
+      "nombre": "Pro Plan Adulto Razas Medianas",
+      "categoria": "Alimento Balanceado",
+      "animal": "perro",
+      "precio": 28000,
+      "stock": 25
+    },
+    {
+      "id": "3",
+      "nombre": "Eukanuba Puppy Razas Grandes",
+      "categoria": "Alimento Balanceado",
+      "animal": "perro",
+      "precio": 29000,
+      "stock": 15
+    },
+    {
+      "id": "4",
+      "nombre": "Royal Canin Sterilised",
+      "categoria": "Alimento Balanceado",
+      "animal": "gato",
+      "precio": 27000,
+      "stock": 20
+    },
+    {
+      "id": "5",
+      "nombre": "Whiskas Adulto Carne",
+      "categoria": "Alimento Balanceado",
+      "animal": "gato",
+      "precio": 12000,
+      "stock": 40
+    },
+    {
+      "id": "6",
+      "nombre": "Cat Chow Gatos Indoor",
+      "categoria": "Alimento Balanceado",
+      "animal": "gato",
+      "precio": 15000,
+      "stock": 30
+    },
+    {
+      "id": "7",
+      "nombre": "Bravecto 10-20kg",
+      "categoria": "Medicamento",
+      "animal": "perro",
+      "precio": 25000,
+      "stock": 10
+    },
+    {
+      "id": "8",
+      "nombre": "Advocate Gatos hasta 4kg",
+      "categoria": "Medicamento",
+      "animal": "gato",
+      "precio": 18000,
+      "stock": 12
+    },
+    {
+      "id": "9",
+      "nombre": "Antiparasitario Total Fullvet",
+      "categoria": "Medicamento",
+      "animal": "perro",
+      "precio": 8000,
+      "stock": 20
+    },
+    {
+      "id": "10",
+      "nombre": "Collar Antipulgas Bayer",
+      "categoria": "Accesorio",
+      "animal": "perro",
+      "precio": 9000,
+      "stock": 18
+    },
+    {
+      "id": "11",
+      "nombre": "Rascador para Gatos con Juguete",
+      "categoria": "Accesorio",
+      "animal": "gato",
+      "precio": 14000,
+      "stock": 8
+    },
+    {
+      "id": "12",
+      "nombre": "Cucha Plástica Mediana",
+      "categoria": "Accesorio",
+      "animal": "perro",
+      "precio": 20000,
+      "stock": 5
+    }
   ],
-
   "clientes": [
     {
-    "id": 1,
-    "nombre": "Joaquin Diaz",
-    "dni": "37957766",
-    "direccion": "Sarmiento 497 BRS",
-    "Celular": "3816689634",
-    "email": "joaquindiaz2103@gmail.com"
-  },
-  {
-    "id": 2,
-    "nombre": "Lucía Fernández",
-    "dni": "40123456",
-    "direccion": "Av. Belgrano 1250",
-    "Celular": "3816001122",
-    "email": "luciaf@gmail.com"
-  },
-  {
-    "id": 3,
-    "nombre": "Martín López",
-    "dni": "38876543",
-    "direccion": "San Martín 833",
-    "Celular": "3816547890",
-    "email": "martinlopez89@hotmail.com"
-  },
-  {
-    "id": 4,
-    "nombre": "Valentina Gómez",
-    "dni": "39543218",
-    "direccion": "Mitre 1024",
-    "Celular": "3816677889",
-    "email": "valengomez@yahoo.com"
-  },
-  {
-    "id": 5,
-    "nombre": "Lucas Martínez",
-    "dni": "41234567",
-    "direccion": "Rivadavia 345",
-    "Celular": "3816123456",
-    "email": "lucasmartinez@hotmail.com"
-  },
-  {
-    "id": 6,
-    "nombre": "Camila Torres",
-    "dni": "39012345",
-    "direccion": "Alsina 1111",
-    "Celular": "3816234567",
-    "email": "camitorres@gmail.com"
-  },
-  {
-    "id": 7,
-    "nombre": "Diego Ramírez",
-    "dni": "38456789",
-    "direccion": "Corrientes 450",
-    "Celular": "3816987456",
-    "email": "diego.ramirez@gmail.com"
-  },
-  {
-    "id": 8,
-    "nombre": "Florencia Herrera",
-    "dni": "40678901",
-    "direccion": "Entre Ríos 789",
-    "Celular": "3816999888",
-    "email": "florherrera@yahoo.com"
-  },
-  {
-    "id": 9,
-    "nombre": "Facundo Ruiz",
-    "dni": "38765432",
-    "direccion": "La Rioja 620",
-    "Celular": "3816554321",
-    "email": "facundoruiz@outlook.com"
-  },
-  {
-    "id": 10,
-    "nombre": "María Sol Ríos",
-    "dni": "39234567",
-    "direccion": "Catamarca 233",
-    "Celular": "3816888777",
-    "email": "solrios@gmail.com"
-  },
-  {
-    "id": 11,
-    "nombre": "Nicolás Sosa",
-    "dni": "37890123",
-    "direccion": "Lavalle 998",
-    "Celular": "3816777123",
-    "email": "nicososa@hotmail.com"
-  },
-  {
-    "id": 12,
-    "nombre": "Brenda Castro",
-    "dni": "39654321",
-    "direccion": "Av. Salta 1122",
-    "Celular": "3816444555",
-    "email": "brendacastro@gmail.com"
-  },
-  {
-    "id": 13,
-    "nombre": "Agustín Molina",
-    "dni": "40567890",
-    "direccion": "Chacabuco 390",
-    "Celular": "3816333444",
-    "email": "agustinmolina@gmail.com"
-  },
-  {
-    "id": 14,
-    "nombre": "Sofía Navarro",
-    "dni": "39987654",
-    "direccion": "Tucumán 765",
-    "Celular": "3816007890",
-    "email": "sofianav@gmail.com"
-  },
-  {
-    "id": 15,
-    "nombre": "Tomás Aguirre",
-    "dni": "38678901",
-    "direccion": "Maipú 111",
-    "Celular": "3816111222",
-    "email": "tomasaguirre@gmail.com"
-  }
+      "id": "1",
+      "nombre": "Joaquin Diaz",
+      "dni": "37957766",
+      "direccion": "Sarmiento 497 BRS",
+      "celular": "3816689634",
+      "email": "joaquindiaz2103@gmail.com"
+    },
+    {
+      "id": "2",
+      "nombre": "Lucía Fernández",
+      "dni": "40123456",
+      "direccion": "Av. Belgrano 1250",
+      "celular": "3816001122",
+      "email": "luciaf@gmail.com"
+    },
+    {
+      "id": "3",
+      "nombre": "Martín López",
+      "dni": "38876543",
+      "direccion": "San Martín 833",
+      "celular": "3816547890",
+      "email": "martinlopez89@hotmail.com"
+    },
+    {
+      "id": "4",
+      "nombre": "Valentina Gómez",
+      "dni": "39543218",
+      "direccion": "Mitre 1024",
+      "celular": "3816677889",
+      "email": "valengomez@yahoo.com"
+    },
+    {
+      "id": "5",
+      "nombre": "Lucas Martínez",
+      "dni": "41234567",
+      "direccion": "Rivadavia 345",
+      "celular": "3816123456",
+      "email": "lucasmartinez@hotmail.com"
+    },
+    {
+      "id": "6",
+      "nombre": "Camila Torres",
+      "dni": "39012345",
+      "direccion": "Alsina 1111",
+      "celular": "3816234567",
+      "email": "camitorres@gmail.com"
+    },
+    {
+      "id": "7",
+      "nombre": "Diego Ramírez",
+      "dni": "38456789",
+      "direccion": "Corrientes 450",
+      "celular": "3816987456",
+      "email": "diego.ramirez@gmail.com"
+    },
+    {
+      "id": "8",
+      "nombre": "Florencia Herrera",
+      "dni": "40678901",
+      "direccion": "Entre Ríos 789",
+      "celular": "3816999888",
+      "email": "florherrera@yahoo.com"
+    },
+    {
+      "id": "9",
+      "nombre": "Facundo Ruiz",
+      "dni": "38765432",
+      "direccion": "La Rioja 620",
+      "celular": "3816554321",
+      "email": "facundoruiz@outlook.com"
+    },
+    {
+      "id": "10",
+      "nombre": "María Sol Ríos",
+      "dni": "39234567",
+      "direccion": "Catamarca 233",
+      "celular": "3816888777",
+      "email": "solrios@gmail.com"
+    },
+    {
+      "id": "11",
+      "nombre": "Nicolás Sosa",
+      "dni": "37890123",
+      "direccion": "Lavalle 998",
+      "celular": "3816777123",
+      "email": "nicososa@hotmail.com"
+    },
+    {
+      "id": "12",
+      "nombre": "Brenda Castro",
+      "dni": "39654321",
+      "direccion": "Av. Salta 1122",
+      "celular": "3816444555",
+      "email": "brendacastro@gmail.com"
+    },
+    {
+      "id": "13",
+      "nombre": "Agustín Molina",
+      "dni": "40567890",
+      "direccion": "Chacabuco 390",
+      "celular": "3816333444",
+      "email": "agustinmolina@gmail.com"
+    },
+    {
+      "id": "14",
+      "nombre": "Sofía Navarro",
+      "dni": "39987654",
+      "direccion": "Tucumán 765",
+      "celular": "3816007890",
+      "email": "sofianav@gmail.com"
+    },
+    {
+      "id": "15",
+      "nombre": "Tomás Aguirre",
+      "dni": "38678901",
+      "direccion": "Maipú 111",
+      "celular": "3816111222",
+      "email": "tomasaguirre@gmail.com"
+    },
+    {
+      "id": "0d5f",
+      "nombre": "angel",
+      "dni": "43773660",
+      "direccion": "calle siempre viva",
+      "celular": "3812060571",
+      "email": "angelpastrana0333@gmail.com"
+    },
+    {
+      "id": "3e24",
+      "nombre": "fsfsf",
+      "dni": "gsgg",
+      "direccion": "sgsg",
+      "celular": "gsjs",
+      "email": "ggag@gasgga.com"
+    },
+    {
+      "id": "6603",
+      "nombre": "angel",
+      "dni": "asdaf",
+      "direccion": "afasfaf",
+      "celular": "afafa",
+      "email": "asdad@ada.com"
+    },
+    {
+      "id": "b05f",
+      "nombre": "",
+      "dni": "",
+      "direccion": "",
+      "celular": "",
+      "email": ""
+    }
   ]
 }

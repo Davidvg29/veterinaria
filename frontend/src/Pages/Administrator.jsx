@@ -1,7 +1,9 @@
+import Formulario from "../Components/CRUD/clientes/Formulario"
+
 const Administrator = ()=>{
     return(
         <>
-            Administrator
+         <Formulario/>
         </>
     )
 }
