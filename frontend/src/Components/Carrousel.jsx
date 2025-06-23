@@ -3,7 +3,7 @@ import logo1 from '../assets/logo1.svg';
 import logo2 from '../assets/logo2.svg';
 import logo3 from '../assets/logo3.svg';
 
-function carrusel() {
+function Carrusel() {
   return (
     <Carousel interval={3000}>
       <Carousel.Item>
@@ -31,4 +31,4 @@ function carrusel() {
   );
 }
 
-export default carrusel;
+export default Carrusel;

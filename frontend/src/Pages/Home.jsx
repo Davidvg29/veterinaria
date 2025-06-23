@@ -1,7 +1,15 @@
+import Header from "../Components/Header"
+import Carrousel from "../Components/Carrousel"
+import Cards from "../Components/Cards"
+import Footer from "../Components/Footer"
+
 const Home = () => {
   return (
     <div>
-      home
+      <Header/>
+      <Carrousel/>
+      <Cards/>
+      <Footer/>
     </div>
   )
 }
