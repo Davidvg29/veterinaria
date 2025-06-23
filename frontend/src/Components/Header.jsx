@@ -1,5 +1,4 @@
 
-import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import logovet from "../assets/logovet.svg";
 import login from "../assets/login.svg"
