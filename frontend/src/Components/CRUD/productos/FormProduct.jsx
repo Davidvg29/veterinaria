@@ -2,25 +2,27 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from 'react';
 import axios from "axios";
-import { URL_CLIENTES } from '../../../Constants/endpoints';
-import validationFormCliente from '../../../validations/validationsFormCliente';
+import { URL_PRODUCTOS } from '../../../Constants/endpoints';
+import validationFormProduct from '../../../validations/validationsFormProduct';
 
 function Formulario() {
 
     const initialState = {
         nombre: "",
-        dni: "",
-        direccion: "",
-        celular: "",
-        email: "",
+        categoria: "",
+        animal: "",
+        precio: "",
+        stock: "",
     };
     const [formData, setFormdata] = useState(initialState);
 
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormdata({
             ...formData,
-            [e.target.name]: e.target.value
+            
+            [name]: (name === "precio" || name === "stock") ? Number(value) : value,
         });
     };
 
@@ -28,21 +30,21 @@ function Formulario() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const validation = validationFormCliente(formData);
+        const validation = validationFormProduct(formData);
         if (validation.length != 0) {
             return alert(validation)
         }
 
         try {
-            const response = await axios.post(URL_CLIENTES, formData);
-            alert("Cliente guardado con éxito");
+            const response = await axios.post(URL_PRODUCTOS, formData);
+            alert("Producto guardado con éxito");
 
             //para resetear el formulario
-            setFormdata({ initialState });
+            setFormdata(initialState);
 
             console.log(formData);
         } catch (error) {
-            console.error("Error al guardar el cliente:", error);
+            console.error("Error al guardar el Producto", error);
         }
 
 
@@ -51,27 +53,27 @@ function Formulario() {
 
     return (
         <div className="bg-white p-4 rounded-3 shadow text-dark w-50 ">
-            <h3 className="text-center mb-4">Formulario de Clientes</h3>
+            <h3 className="text-center mb-4">Formulario de Productos</h3>
             <Form onSubmit={handleSubmit}  >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Nombre</Form.Label>
-                    <Form.Control type="nombre" name="nombre" placeholder="Nombre" value={formData.nombre} onChange={handleChange} />
+                    <Form.Control type="nombre" name="nombre" placeholder="Royal Canin Urinary" value={formData.nombre} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>DNI</Form.Label>
-                    <Form.Control type="dni" name="dni" placeholder="DNI" value={formData.dni} onChange={handleChange} />
+                    <Form.Label>Categoria</Form.Label>
+                    <Form.Control type="categoria" name="categoria" placeholder="Alimento Balanceado" value={formData.categoria} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Direccion</Form.Label>
-                    <Form.Control type="direccion" name="direccion" placeholder="Direccion" value={formData.direccion} onChange={handleChange} />
+                    <Form.Label>Animal</Form.Label>
+                    <Form.Control type="animal" name="animal" placeholder="Perro" value={formData.animal} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Celular</Form.Label>
-                    <Form.Control type="celular" name="celular" placeholder="Celular" value={formData.celular} onChange={handleChange} />
+                    <Form.Label>Precio</Form.Label>
+                    <Form.Control type="number" step="0.01" min="0" name="precio" placeholder="$1000.00" value={formData.precio} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                    <Form.Label>Stock</Form.Label>
+                    <Form.Control type="number" step="1" name="stock" placeholder="20" value={formData.stock} onChange={handleChange} />
                 </Form.Group>
 
                 <div className=" text-end mt3">

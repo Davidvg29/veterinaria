@@ -221,38 +221,6 @@
       "direccion": "Maipú 111",
       "celular": "3816111222",
       "email": "tomasaguirre@gmail.com"
-    },
-    {
-      "id": "0d5f",
-      "nombre": "angel",
-      "dni": "43773660",
-      "direccion": "calle siempre viva",
-      "celular": "3812060571",
-      "email": "angelpastrana0333@gmail.com"
-    },
-    {
-      "id": "3e24",
-      "nombre": "fsfsf",
-      "dni": "gsgg",
-      "direccion": "sgsg",
-      "celular": "gsjs",
-      "email": "ggag@gasgga.com"
-    },
-    {
-      "id": "6603",
-      "nombre": "angel",
-      "dni": "asdaf",
-      "direccion": "afasfaf",
-      "celular": "afafa",
-      "email": "asdad@ada.com"
-    },
-    {
-      "id": "b05f",
-      "nombre": "",
-      "dni": "",
-      "direccion": "",
-      "celular": "",
-      "email": ""
     }
   ]
 }
