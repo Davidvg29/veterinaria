@@ -99,6 +99,14 @@
       "animal": "perro",
       "precio": 20000,
       "stock": 5
+    },
+    {
+      "id": "ab35",
+      "nombre": "Pelota de goma",
+      "categoria": "Juguetes",
+      "animal": "perro",
+      "precio": 11000,
+      "stock": 200
     }
   ],
   "clientes": [
@@ -223,36 +231,12 @@
       "email": "tomasaguirre@gmail.com"
     },
     {
-      "id": "0d5f",
-      "nombre": "angel",
+      "id": "23ca",
+      "nombre": "Angel Pastrana",
       "dni": "43773660",
-      "direccion": "calle siempre viva",
+      "direccion": "pasaje 24 de junio",
       "celular": "3812060571",
       "email": "angelpastrana0333@gmail.com"
-    },
-    {
-      "id": "3e24",
-      "nombre": "fsfsf",
-      "dni": "gsgg",
-      "direccion": "sgsg",
-      "celular": "gsjs",
-      "email": "ggag@gasgga.com"
-    },
-    {
-      "id": "6603",
-      "nombre": "angel",
-      "dni": "asdaf",
-      "direccion": "afasfaf",
-      "celular": "afafa",
-      "email": "asdad@ada.com"
-    },
-    {
-      "id": "b05f",
-      "nombre": "",
-      "dni": "",
-      "direccion": "",
-      "celular": "",
-      "email": ""
     }
   ]
 }
