@@ -9,6 +9,8 @@ import cardCliente from '../assets/cardCliente.png'
 import cardProducto from '../assets/cardProducto.png'
 import FormClient from './CRUD/clientes/FormClient';
 import FromProducto from './CRUD/productos/FormProduct'
+import ViewClient from './CRUD/clientes/ViewClient';
+import ViewProduct from './CRUD/productos/ViewProduct';
 
 const MainAdministrator = () => {
     const [showModal, setShowModal] = useState(false);
@@ -24,6 +26,13 @@ const MainAdministrator = () => {
         setFromType("");
     };
 
+    const TITULOS = {
+        cliente: "Nuevo Cliente",
+        producto: "Nuevo Producto",
+        viewClient: "Lista de Clientes",
+        viewProducto:"Lista de Productos"
+    };
+
     return (
         <>
             <div className='d-flex flex-wrap  justify-content-center align-items-center'>
@@ -37,7 +46,7 @@ const MainAdministrator = () => {
                     </Card.Body>
                     <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
                         <Button size="sm" variant="success" onClick={() => handleOpenModal("cliente")} >Crear</Button>
-                        <Button size="sm" variant="primary" >Ver</Button>
+                        <Button size="sm" variant="primary" onClick={() => handleOpenModal("viewClient")}>Ver</Button>
                         <Button size="sm" variant="warning" >Editar</Button>
                         <Button size="sm" variant="danger" >Eliminar</Button>
                     </ListGroup>
@@ -53,19 +62,21 @@ const MainAdministrator = () => {
                     </Card.Body>
                     <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
                         <Button size="sm" variant="success" onClick={() => handleOpenModal("producto")} >Crear</Button>
-                        <Button size="sm" variant="primary" >Ver</Button>
+                        <Button size="sm" variant="primary" onClick={()=> handleOpenModal("viewProducto")}>Ver</Button>
                         <Button size="sm" variant="warning" >Editar</Button>
                         <Button size="sm" variant="danger" >Eliminar</Button>
                     </ListGroup>
                 </Card>
             </div>
-            <Modal show={showModal} onHide={handleCloseModal} size='lg' scrollable centered>
+            <Modal show={showModal} onHide={handleCloseModal} size='lg'scrollable centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>{fromType==="cliente"? "Nuevo Cliente" : "Nuevo Producto"}</Modal.Title>
+                    <Modal.Title>{TITULOS[fromType]}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="d-flex justify-content-center ">
-                    {fromType === "cliente" && <FormClient/>}
-                    {fromType === "producto" && <FromProducto/>}
+                <Modal.Body className="d-flex justify-content-center " >
+                    {fromType === "cliente" && <FormClient />}
+                    {fromType === "producto" && <FromProducto />}
+                    {fromType === "viewClient" && <ViewClient />}
+                    {fromType === "viewProducto" && <ViewProduct/>}
                 </Modal.Body>
 
 

@@ -9,6 +9,7 @@ function Formulario() {
 
     const initialState = {
         nombre: "",
+        codigo:"",
         categoria: "",
         animal: "",
         precio: "",
@@ -58,6 +59,10 @@ function Formulario() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="nombre" name="nombre" placeholder="Royal Canin Urinary" value={formData.nombre} onChange={handleChange} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label>Codigo</Form.Label>
+                    <Form.Control type="codigo" name="codigo" placeholder="00001" value={formData.codigo} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Categoria</Form.Label>
