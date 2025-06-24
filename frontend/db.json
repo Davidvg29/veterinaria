@@ -107,6 +107,14 @@
       "animal": "perro",
       "precio": 11000,
       "stock": 200
+    },
+    {
+      "id": "ef53",
+      "nombre": "pelotita",
+      "categoria": "juguete",
+      "animal": "todos",
+      "precio": 1500,
+      "stock": 5
     }
   ],
   "clientes": [
@@ -237,6 +245,14 @@
       "direccion": "pasaje 24 de junio",
       "celular": "3812060571",
       "email": "angelpastrana0333@gmail.com"
+    },
+    {
+      "id": "3778",
+      "nombre": "David ",
+      "dni": "43501432",
+      "direccion": "vallistos 200 m6 c21",
+      "celular": "3813965671",
+      "email": "davidvaldezgramajo@gmail.com"
     }
   ]
 }
