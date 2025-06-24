@@ -3,7 +3,7 @@ import logovet from "../assets/logovet.svg";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "rgba(63, 3, 175, 0.5)", color: "#fff" }} className="py-3 mt-5">
+    <footer style={{ backgroundColor: "rgba(63, 3, 175, 0.5)", color: "#fff" }} className="py-3">
       <div className="text-center">
         <img src={logovet} alt="VetSoft Logo" style={{ height: "40px" }} />
         <p className="mt-2 mb-1">SoftVet - Software para Veterinarias</p>
