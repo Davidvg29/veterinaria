@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
-import { ADMINISTRATOR, HOME, LOGIN, NOSOTROS } from "./Routers/router"
+import { ADMINISTRATOR, HOME, LOGIN, NOSOTROS, PAGENOTFOUND } from "./Routers/router"
 import Administrator from "./Pages/Administrator"
 import Login from "./Pages/Login"
 import Nosotros from "./Pages/Nosotros"
+import PageNotFound from "./Pages/PageNotFound"
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
       <Route path={LOGIN} element={<Login/>}/>
       <Route path={ADMINISTRATOR} element={<Administrator/>}/>
       <Route path={NOSOTROS} element={<Nosotros/>}/>
+      <Route path={PAGENOTFOUND} element={<PageNotFound/>} />
     </Routes>
   )
 }
