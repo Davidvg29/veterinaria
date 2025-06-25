@@ -7,6 +7,7 @@
     {
       "id": "1",
       "nombre": "Royal Canin Urinary",
+      "codigo": "00001",
       "categoria": "Alimento Balanceado",
       "animal": "perro",
       "precio": 30000,
@@ -15,6 +16,7 @@
     {
       "id": "2",
       "nombre": "Pro Plan Adulto Razas Medianas",
+      "codigo": "00002",
       "categoria": "Alimento Balanceado",
       "animal": "perro",
       "precio": 28000,
@@ -23,6 +25,7 @@
     {
       "id": "3",
       "nombre": "Eukanuba Puppy Razas Grandes",
+      "codigo": "00003",
       "categoria": "Alimento Balanceado",
       "animal": "perro",
       "precio": 29000,
@@ -31,6 +34,7 @@
     {
       "id": "4",
       "nombre": "Royal Canin Sterilised",
+      "codigo": "00004",
       "categoria": "Alimento Balanceado",
       "animal": "gato",
       "precio": 27000,
@@ -39,6 +43,7 @@
     {
       "id": "5",
       "nombre": "Whiskas Adulto Carne",
+      "codigo": "00005",
       "categoria": "Alimento Balanceado",
       "animal": "gato",
       "precio": 12000,
@@ -47,6 +52,7 @@
     {
       "id": "6",
       "nombre": "Cat Chow Gatos Indoor",
+      "codigo": "00006",
       "categoria": "Alimento Balanceado",
       "animal": "gato",
       "precio": 15000,
@@ -55,6 +61,7 @@
     {
       "id": "7",
       "nombre": "Bravecto 10-20kg",
+      "codigo": "00007",
       "categoria": "Medicamento",
       "animal": "perro",
       "precio": 25000,
@@ -63,6 +70,7 @@
     {
       "id": "8",
       "nombre": "Advocate Gatos hasta 4kg",
+      "codigo": "00008",
       "categoria": "Medicamento",
       "animal": "gato",
       "precio": 18000,
@@ -71,6 +79,7 @@
     {
       "id": "9",
       "nombre": "Antiparasitario Total Fullvet",
+      "codigo": "00009",
       "categoria": "Medicamento",
       "animal": "perro",
       "precio": 8000,
@@ -79,6 +88,7 @@
     {
       "id": "10",
       "nombre": "Collar Antipulgas Bayer",
+      "codigo": "00010",
       "categoria": "Accesorio",
       "animal": "perro",
       "precio": 9000,
@@ -87,6 +97,7 @@
     {
       "id": "11",
       "nombre": "Rascador para Gatos con Juguete",
+      "codigo": "00011",
       "categoria": "Accesorio",
       "animal": "gato",
       "precio": 14000,
@@ -95,9 +106,26 @@
     {
       "id": "12",
       "nombre": "Cucha Plástica Mediana",
+      "codigo": "00012",
       "categoria": "Accesorio",
       "animal": "perro",
       "precio": 20000,
+      "stock": 5
+    },
+    {
+      "id": "ab35",
+      "nombre": "Pelota de goma",
+      "categoria": "Juguetes",
+      "animal": "perro",
+      "precio": 11000,
+      "stock": 200
+    },
+    {
+      "id": "ef53",
+      "nombre": "pelotita",
+      "categoria": "juguete",
+      "animal": "todos",
+      "precio": 1500,
       "stock": 5
     }
   ],
@@ -223,36 +251,20 @@
       "email": "tomasaguirre@gmail.com"
     },
     {
-      "id": "0d5f",
-      "nombre": "angel",
+      "id": "23ca",
+      "nombre": "Angel Pastrana",
       "dni": "43773660",
-      "direccion": "calle siempre viva",
+      "direccion": "pasaje 24 de junio",
       "celular": "3812060571",
       "email": "angelpastrana0333@gmail.com"
     },
     {
-      "id": "3e24",
-      "nombre": "fsfsf",
-      "dni": "gsgg",
-      "direccion": "sgsg",
-      "celular": "gsjs",
-      "email": "ggag@gasgga.com"
-    },
-    {
-      "id": "6603",
-      "nombre": "angel",
-      "dni": "asdaf",
-      "direccion": "afasfaf",
-      "celular": "afafa",
-      "email": "asdad@ada.com"
-    },
-    {
-      "id": "b05f",
-      "nombre": "",
-      "dni": "",
-      "direccion": "",
-      "celular": "",
-      "email": ""
+      "id": "3778",
+      "nombre": "David ",
+      "dni": "43501432",
+      "direccion": "vallistos 200 m6 c21",
+      "celular": "3813965671",
+      "email": "davidvaldezgramajo@gmail.com"
     }
   ]
 }

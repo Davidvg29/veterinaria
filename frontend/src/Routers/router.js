@@ -1,3 +1,4 @@
 export const HOME = "/"
 export const LOGIN = "/login"
 export const ADMINISTRATOR = "/administrator"
+export const NOSOTROS = "/nosotros"

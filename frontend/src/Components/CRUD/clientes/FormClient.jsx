@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
 
-function Formulario() {
+function FormClient() {
 
     const initialState = {
         nombre: "",
@@ -38,7 +38,7 @@ function Formulario() {
             alert("Cliente guardado con éxito");
 
             //para resetear el formulario
-            setFormdata({ initialState });
+            setFormdata(initialState );
 
             console.log(formData);
         } catch (error) {
@@ -88,4 +88,4 @@ function Formulario() {
     );
 }
 
-export default Formulario;
+export default FormClient;
