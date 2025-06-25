@@ -3,37 +3,17 @@ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import axios from 'axios';
+import Button from 'react-bootstrap/esm/Button';
 
-const ViewClient = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [fromType, setFromType] = useState("");
-
-    const handleOpenModal = (type) => {
-        setFromType(type);
-        setShowModal(true);
-    };
-
-    const handleCloseModal = (type) => {
-        setShowModal(false);
-        setFromType("");
-    };
-
-    const TITULOS = {
-        cliente: "Nuevo Cliente",
-        editClient: "Editar Clientes",
-        deleteClient:"Eliminar Clientes",
-        
-
-    };
-
+const EditClient = () => {
     const [clientes, setClientes] = useState([]);
     const [busqueda, setBusqueda] = useState("");
 
     useEffect(() => {
-        cargarClientes();
+        cargarCliente();
     }, []);
 
-    const cargarClientes = async () => {
+    const cargarCliente = async () => {
         try {
             const response = await axios.get(URL_CLIENTES);
             console.log("CLIENTES CARGADOS:", response.data);
@@ -42,6 +22,7 @@ const ViewClient = () => {
             console.error("Error al cargar los clientes:", error);
         }
     }
+    
 
     const clientesFiltrados = clientes.filter((cliente) => 
         cliente.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
@@ -53,7 +34,7 @@ const ViewClient = () => {
             <div className="w-100">
                 <Form.Control
                     type="text"
-                    placeholder="Buscar por nombre o DNI"
+                    placeholder="Buscar por nombre o codigo"
                     className="mb-3"
                     value={busqueda}
                     onChange={(e) => setBusqueda(e.target.value)}
@@ -78,12 +59,17 @@ const ViewClient = () => {
                                     <td>{cliente.direccion}</td>
                                     <td>{cliente.celular}</td>
                                     <td>{cliente.email}</td>
+                                    <td className="text-center">
+                                        <Button variant="warning" size="sm" >
+                                            Editar
+                                        </Button>
+                                    </td>
                                 </tr>
                             ))
                         ) : (
                             <tr>
                                 <td colSpan="5" className="text-center">
-                                    No se encontraron clientes.
+                                    No se encontraron productos.
                                 </td>
                             </tr>
                         )}
@@ -94,4 +80,4 @@ const ViewClient = () => {
     )
 }
 
-export default ViewClient
+export default EditClient

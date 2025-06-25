@@ -13,6 +13,7 @@ import ViewClient from './CRUD/clientes/ViewClient';
 import ViewProduct from './CRUD/productos/ViewProduct';
 import DeleteClient from './CRUD/clientes/DeleteClient';
 import DeleteProduct from './CRUD/productos/DeleteProduct';
+import EditClient from './CRUD/clientes/EditClient';
 
 const MainAdministrator = () => {
     const [showModal, setShowModal] = useState(false);
@@ -33,8 +34,10 @@ const MainAdministrator = () => {
         producto: "Nuevo Producto",
         viewClient: "Lista de Clientes",
         viewProducto:"Lista de Productos",
+        editClient: "Editar Clientes",
         deleteClient:"Eliminar Clientes",
         deleteProduct:"Eliminar Productos"
+
     };
 
     return (
@@ -48,12 +51,12 @@ const MainAdministrator = () => {
                             Administrá todos tus clientes desde aquí.
                         </Card.Text>
                     </Card.Body>
-                    <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
+                    {/* <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
                         <Button size="sm" variant="success" onClick={() => handleOpenModal("cliente")} >Crear</Button>
                         <Button size="sm" variant="primary" onClick={() => handleOpenModal("viewClient")}>Ver</Button>
-                        <Button size="sm" variant="warning" >Editar</Button>
+                        <Button size="sm" variant="warning" onClick={() => handleOpenModal("editClient") }>Editar</Button>
                         <Button size="sm" variant="danger" onClick={() => handleOpenModal("deleteClient")}>Eliminar</Button>
-                    </ListGroup>
+                    </ListGroup> */}
                 </Card>
 
                 <Card style={{ width: '18rem' }} className="mx-3 my-2">
@@ -64,15 +67,15 @@ const MainAdministrator = () => {
                             Administrá todos tus productos desde aquí
                         </Card.Text>
                     </Card.Body>
-                    <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
+                    {/* <ListGroup className="d-flex justify-content-between flex-wrap gap-2 p-2">
                         <Button size="sm" variant="success" onClick={() => handleOpenModal("producto")} >Crear</Button>
                         <Button size="sm" variant="primary" onClick={()=> handleOpenModal("viewProducto")}>Ver</Button>
                         <Button size="sm" variant="warning" >Editar</Button>
                         <Button size="sm" variant="danger" onClick={()=> handleOpenModal("deleteProduct")} >Eliminar</Button>
-                    </ListGroup>
+                    </ListGroup> */}
                 </Card>
             </div>
-            <Modal show={showModal} onHide={handleCloseModal} size='lg'scrollable centered>
+            <Modal show={showModal} onHide={handleCloseModal} size='lg' centered>
                 <Modal.Header closeButton>
                     <Modal.Title>{TITULOS[fromType]}</Modal.Title>
                 </Modal.Header>
@@ -83,6 +86,7 @@ const MainAdministrator = () => {
                     {fromType === "viewProducto" && <ViewProduct/>}
                     {fromType === "deleteClient" && <DeleteClient/>}
                     {fromType === "deleteProduct" && <DeleteProduct/>}
+                    {fromType === "editClient" && <EditClient/>}
                 </Modal.Body>
 
 
