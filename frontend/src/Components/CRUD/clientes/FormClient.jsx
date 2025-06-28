@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
 
-function FormClient() {
+function FormClient({onClose}) {
 
     const initialState = {
         nombre: "",
@@ -39,7 +39,10 @@ function FormClient() {
 
             //para resetear el formulario
             setFormdata(initialState );
-
+            //para cerrar el modal
+            if(response){
+                onClose();
+            }
             console.log(formData);
         } catch (error) {
             console.error("Error al guardar el cliente:", error);
@@ -75,7 +78,7 @@ function FormClient() {
                 </Form.Group>
 
                 <div className=" text-end mt3">
-                    <Button className="m-2" variant="danger" onClick={() => setFormdata(initialState)}>
+                    <Button className="m-2" variant="danger" onClick={onClose}>
                         Cancelar
                     </Button>
 

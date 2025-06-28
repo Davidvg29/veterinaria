@@ -249,22 +249,6 @@
       "direccion": "Maipú 111",
       "celular": "3816111222",
       "email": "tomasaguirre@gmail.com"
-    },
-    {
-      "id": "23ca",
-      "nombre": "Angel Pastrana",
-      "dni": "43773660",
-      "direccion": "pasaje 24 de junio",
-      "celular": "3812060571",
-      "email": "angelpastrana0333@gmail.com"
-    },
-    {
-      "id": "3778",
-      "nombre": "David ",
-      "dni": "43501432",
-      "direccion": "vallistos 200 m6 c21",
-      "celular": "3813965671",
-      "email": "davidvaldezgramajo@gmail.com"
     }
   ]
 }
