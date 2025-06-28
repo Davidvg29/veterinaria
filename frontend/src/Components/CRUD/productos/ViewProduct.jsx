@@ -1,78 +1,45 @@
 import { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table';
-import Form from 'react-bootstrap/Form';
 import { URL_PRODUCTOS } from '../../../Constants/endpoints';
 import axios from 'axios';
+import { Card, Spinner, Alert } from "react-bootstrap";
 
-const ViewProducto = () => {
-    const [productos, setProductos] = useState([]);
-    const [busqueda, setBusqueda] = useState("");
+const ViewProduct = ({id}) => {
+    //se recibe el id como prop
+    
+    const [producto,setProducto] = useState(null);
 
-    useEffect(() => {
-        cargarProductos();
-    }, []);
+    useEffect(()=>{
+        if(!id) return;
 
-    const cargarProductos = async () => {
-        try {
-            const response = await axios.get(URL_PRODUCTOS);
-            console.log("PRODUCTOS CARGADOS:", response.data);
-            setProductos(response.data)
-        } catch (error) {
-            console.error("Error al cargar los productos:", error);
-        }
-    }
+        const getProducto = async () =>{ 
+            try {
+                const response=await axios.get(`${URL_PRODUCTOS}/${id}`);
+                setProducto(response.data);
+            } catch (error) {
+                console.error("Error al obtener el producto:",error);
+            }
+        };
+        getProducto();
+    },[id])
 
-    const productosFiltrados = productos.filter((producto) => 
-        producto.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-        producto.codigo.toString().includes(busqueda)
-    );
+    if (!producto) return <p>Cargando producto...</p>;
 
     return (
         <>
-            <div className="w-100">
-                <Form.Control
-                    type="text"
-                    placeholder="Buscar por nombre o codigo"
-                    className="mb-3"
-                    value={busqueda}
-                    onChange={(e) => setBusqueda(e.target.value)}
-                />
+            <Card className="m-4 p-4 shadow">
+                <Card.Body>
+                    <Card.Title className="mb-3">{producto.nombre}</Card.Title>
+                    <Card.Text><strong>Codigo:</strong> {producto.codigo}</Card.Text>
+                    <Card.Text><strong>Categoria:</strong> {producto.categoria}</Card.Text>
+                    <Card.Text><strong>Animal:</strong> {producto.animal}</Card.Text>
+                    <Card.Text><strong>Precio:</strong> {producto.precio}</Card.Text>
+                    <Card.Text><strong>Stock:</strong> {producto.stock}</Card.Text>
 
-                <Table striped bordered hover responsive size="sm">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Codigo</th>
-                            <th>Categoria</th>
-                            <th>Animal</th>
-                            <th>Precio</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {productosFiltrados.length > 0 ? (
-                            productosFiltrados.map((producto) => (
-                                <tr key={producto.id}>
-                                    <td>{producto.nombre}</td>
-                                    <td>{producto.codigo}</td>
-                                    <td>{producto.categoria}</td>
-                                    <td>{producto.animal}</td>
-                                    <td>{producto.precio}</td>
-                                    <td>{producto.stock}</td>
-                                </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="5" className="text-center">
-                                    No se encontraron productos.
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </Table>
-            </div>
+                </Card.Body>
+            </Card>
+
         </>
     )
 }
 
-export default ViewProducto
+export default ViewProduct

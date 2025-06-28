@@ -1,4 +1,7 @@
 export const HOME = "/"
 export const LOGIN = "/login"
 export const ADMINISTRATOR = "/administrator"
+export const PRODUCTOS = "/administrator/productos"
+export const CLIENTES = "/administrator/clientes"
 export const NOSOTROS = "/nosotros"
+export const PAGENOTFOUND = "*"

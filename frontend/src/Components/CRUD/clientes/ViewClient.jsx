@@ -1,74 +1,41 @@
 import { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table';
-import Form from 'react-bootstrap/Form';
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import axios from 'axios';
+import { Card, Spinner, Alert } from "react-bootstrap";
 
-const ViewClient = () => {
-    const [clientes, setClientes] = useState([]);
-    const [busqueda, setBusqueda] = useState("");
+const ViewClient = ({id}) => {
+    //se recibe el id como prop
+    
+    const [cliente,setCliente] = useState(null);
 
-    useEffect(() => {
-        cargarClientes();
-    }, []);
+    useEffect(()=>{
+        if(!id) return;
 
-    const cargarClientes = async () => {
-        try {
-            const response = await axios.get(URL_CLIENTES);
-            console.log("CLIENTES CARGADOS:", response.data);
-            setClientes(response.data)
-        } catch (error) {
-            console.error("Error al cargar los clientes:", error);
-        }
-    }
+        const getClient = async () =>{ 
+            try {
+                const response=await axios.get(`${URL_CLIENTES}/${id}`);
+                setCliente(response.data);
+            } catch (error) {
+                console.error("Error al obtener el cliente:",error);
+            }
+        };
+        getClient();
+    },[id])
 
-    const clientesFiltrados = clientes.filter((cliente) => 
-        cliente.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-        cliente.dni.toString().includes(busqueda)
-    );
+    if (!cliente) return <p>Cargando cliente...</p>;
 
     return (
         <>
-            <div className="w-100">
-                <Form.Control
-                    type="text"
-                    placeholder="Buscar por nombre o DNI"
-                    className="mb-3"
-                    value={busqueda}
-                    onChange={(e) => setBusqueda(e.target.value)}
-                />
+            <Card className="m-4 p-4 shadow">
+                <Card.Body>
+                    <Card.Title className="mb-3">{cliente.nombre}</Card.Title>
+                    <Card.Text><strong>DNI:</strong> {cliente.dni}</Card.Text>
+                    <Card.Text><strong>Dirección:</strong> {cliente.direccion}</Card.Text>
+                    <Card.Text><strong>Celular:</strong> {cliente.celular}</Card.Text>
+                    <Card.Text><strong>Email:</strong> {cliente.email}</Card.Text>
+                </Card.Body>
+            </Card>
 
-                <Table striped bordered hover responsive size="sm">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>DNI</th>
-                            <th>Dirección</th>
-                            <th>Celular</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {clientesFiltrados.length > 0 ? (
-                            clientesFiltrados.map((cliente) => (
-                                <tr key={cliente.id}>
-                                    <td>{cliente.nombre}</td>
-                                    <td>{cliente.dni}</td>
-                                    <td>{cliente.direccion}</td>
-                                    <td>{cliente.celular}</td>
-                                    <td>{cliente.email}</td>
-                                </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="5" className="text-center">
-                                    No se encontraron clientes.
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </Table>
-            </div>
         </>
     )
 }
