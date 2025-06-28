@@ -3,6 +3,9 @@ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import axios from 'axios';
+import FormClient from './FormClient';
+import EditClient from './EditClient';
+import DeleteClient from './DeleteClient';
 
 const ViewClient = () => {
     const [showModal, setShowModal] = useState(false);
@@ -22,7 +25,7 @@ const ViewClient = () => {
         cliente: "Nuevo Cliente",
         editClient: "Editar Clientes",
         deleteClient:"Eliminar Clientes",
-        
+
 
     };
 
@@ -43,7 +46,7 @@ const ViewClient = () => {
         }
     }
 
-    const clientesFiltrados = clientes.filter((cliente) => 
+    const clientesFiltrados = clientes.filter((cliente) =>
         cliente.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
         cliente.dni.toString().includes(busqueda)
     );
@@ -90,6 +93,19 @@ const ViewClient = () => {
                     </tbody>
                 </Table>
             </div>
+            {/* <Modal show={showModal} onHide={handleCloseModal} size='lg' centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>{TITULOS[fromType]}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="d-flex justify-content-center " >
+                    {fromType === "cliente" && <FormClient />}
+                    {fromType === "editClient" && <EditClient/>}
+                    {fromType === "deleteClient" && <DeleteClient/>}
+
+                </Modal.Body>
+
+
+            </Modal> */}
         </>
     )
 }
