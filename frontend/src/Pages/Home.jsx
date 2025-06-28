@@ -11,7 +11,6 @@ const Home = () => {
       <Carrousel/>
       <CardsVet/>
       <Banner1/>
-      <Cards/>
       <Footer/>
     </div>
   )
