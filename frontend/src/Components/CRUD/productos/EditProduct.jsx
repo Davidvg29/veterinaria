@@ -5,25 +5,28 @@ import axios from "axios";
 import { URL_PRODUCTOS } from '../../../Constants/endpoints';
 import validationFormProduct from '../../../validations/validationsFormProduct';
 
-function Formulario({onClose, onUpdate}) {
+const EditProduct = ({id,onClose,onUpdated}) => {
+    //state del formulario
+    const [formData, setFormdata] = useState({});
 
-    const initialState = {
-        nombre: "",
-        codigo:"",
-        categoria: "",
-        animal: "",
-        precio: "",
-        stock: "",
-    };
-    const [formData, setFormdata] = useState(initialState);
 
+    const getProducto = async () => {
+        try {
+            const response = await axios.get(`${URL_PRODUCTOS}/${id}`);
+            setFormdata(response.data);
+        } catch (error) {
+            console.error("Error al obtener el producto:", error);
+        }
+    }
+
+    useEffect(() => {
+        getProducto();
+    },[]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
         setFormdata({
             ...formData,
-            
-            [name]: (name === "precio" || name === "stock") ? Number(value) : value,
+            [e.target.name]: e.target.value
         });
     };
 
@@ -37,19 +40,20 @@ function Formulario({onClose, onUpdate}) {
         }
 
         try {
-            const response = await axios.post(URL_PRODUCTOS, formData);
+            const response = await axios.put(`${URL_PRODUCTOS}/${id}`, formData);
             alert("Producto guardado con éxito");
-            
-            
+            //para recargar la pagina
+            onUpdated();
             //para resetear el formulario
-            setFormdata(initialState);
+            setFormdata({});
+            //para cerrar el modal
             if(response){
-                onUpdate();
                 onClose();
             }
+
             console.log(formData);
         } catch (error) {
-            console.error("Error al guardar el Producto", error);
+            console.error("Error al actualizar el producto:", error);
         }
 
 
@@ -62,27 +66,27 @@ function Formulario({onClose, onUpdate}) {
             <Form onSubmit={handleSubmit}  >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Nombre</Form.Label>
-                    <Form.Control type="nombre" name="nombre" placeholder="Royal Canin Urinary" value={formData.nombre} onChange={handleChange} />
+                    <Form.Control type="text" name="nombre" placeholder="Royal Canin Urinary" value={formData.nombre || ''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Codigo</Form.Label>
-                    <Form.Control type="codigo" name="codigo" placeholder="00001" value={formData.codigo} onChange={handleChange} />
+                    <Form.Control type="text" name="codigo" placeholder="00001" value={formData.codigo || ''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Categoria</Form.Label>
-                    <Form.Control type="categoria" name="categoria" placeholder="Alimento Balanceado" value={formData.categoria} onChange={handleChange} />
+                    <Form.Control type="text" name="categoria" placeholder="Alimento Balanceado" value={formData.categoria || ''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Animal</Form.Label>
-                    <Form.Control type="animal" name="animal" placeholder="Perro" value={formData.animal} onChange={handleChange} />
+                    <Form.Control type="text" name="animal" placeholder="Perro" value={formData.animal || ''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Precio</Form.Label>
-                    <Form.Control type="number" step="0.01" min="0" name="precio" placeholder="$1000.00" value={formData.precio} onChange={handleChange} />
+                    <Form.Control type="text" step="0.01" min="0" name="precio" placeholder="$1000.00" value={formData.precio || ''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Stock</Form.Label>
-                    <Form.Control type="number" step="1" name="stock" placeholder="20" value={formData.stock} onChange={handleChange} />
+                    <Form.Control type="text" step="1" name="stock" placeholder="20" value={formData.stock || ''} onChange={handleChange} />
                 </Form.Group>
 
                 <div className=" text-end mt3">
@@ -99,4 +103,4 @@ function Formulario({onClose, onUpdate}) {
     );
 }
 
-export default Formulario;
+export default EditProduct;
