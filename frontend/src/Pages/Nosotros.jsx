@@ -1,7 +1,13 @@
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
+import Cards from "../Components/Cards"
+
 const Nosotros = () => {
     return ( 
         <>
-            nosotros
+        <Header/>
+        <Cards/>
+        <Footer/>
         </>
      );
 }
