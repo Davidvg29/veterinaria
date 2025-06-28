@@ -136,7 +136,7 @@ const MainCliente = () => {
                     <Modal.Title>{TITULOS[fromType]}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="d-flex justify-content-center " >
-                    {fromType === "client" && <FormClient onClose={handleCloseModal}/>}
+                    {fromType === "client" && <FormClient onClose={handleCloseModal} onUpdated={cargarClientes}/>}
                     {fromType === "viewClient" && <ViewClient id={clienteId} />}{/*paso el id por prop */}
                     {fromType === "editClient" && <EditClient id={clienteId} onClose={handleCloseModal} onUpdated={cargarClientes}/>}
                 </Modal.Body>

@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
 
-function FormClient({onClose}) {
+function FormClient({onClose,onUpdate}) {
 
     const initialState = {
         nombre: "",
@@ -36,11 +36,12 @@ function FormClient({onClose}) {
         try {
             const response = await axios.post(URL_CLIENTES, formData);
             alert("Cliente guardado con éxito");
-
+            
             //para resetear el formulario
             setFormdata(initialState );
             //para cerrar el modal
             if(response){
+                onUpdate();
                 onClose();
             }
             console.log(formData);

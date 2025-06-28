@@ -1,9 +1,10 @@
-import ViewProducto from "../Components/CRUD/productos/ViewProduct";
+import MainProduct from "../Components/CRUD/productos/MainProducto";
+
 
 const Productos = () => {
     return ( 
         <>
-            <ViewProducto/>
+            <MainProduct/>
         </>
      );
 }

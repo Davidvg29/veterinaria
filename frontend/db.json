@@ -111,22 +111,6 @@
       "animal": "perro",
       "precio": 20000,
       "stock": 5
-    },
-    {
-      "id": "ab35",
-      "nombre": "Pelota de goma",
-      "categoria": "Juguetes",
-      "animal": "perro",
-      "precio": 11000,
-      "stock": 200
-    },
-    {
-      "id": "ef53",
-      "nombre": "pelotita",
-      "categoria": "juguete",
-      "animal": "todos",
-      "precio": 1500,
-      "stock": 5
     }
   ],
   "clientes": [
