@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+node.cmd
+npm.cmd
+
+node.cmd
+npm.cmd
