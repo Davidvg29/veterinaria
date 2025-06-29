@@ -10,10 +10,9 @@ const Home = () => {
     <div>
       <Header/>
       <Carrousel/>
-      <CardsVet/>
       <Banner1/>
       <Banner2/>
-      <Cards/>
+      <CardsVet/>
       <Footer/>
     </div>
   )
