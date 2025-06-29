@@ -1,4 +1,4 @@
-import React from "react";
+import {Link} from 'react-router-dom';
 import logovet from "../assets/logovet.svg";
 
 const Footer = () => {
@@ -17,6 +17,10 @@ const Footer = () => {
           >
             +54 381 668-9634
           </a></p>
+
+          <Link to= "/nosotros" className='text-white text-decoration-none'>Desarrolladores
+          </Link>
+          
         <p className="mb-0">© 2025 VetSoft. Todos los derechos reservados.</p>
       </div>
     </footer>

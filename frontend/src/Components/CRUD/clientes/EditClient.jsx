@@ -4,18 +4,26 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
+import {useNavigate} from 'react-router-dom';
 
-function FormClient({onClose,onUpdate}) {
+const EditClient = ({id,onClose,onUpdated}) => {
+    //state del formulario
+    const [formData, setFormdata] = useState({});
 
-    const initialState = {
-        nombre: "",
-        dni: "",
-        direccion: "",
-        celular: "",
-        email: "",
-    };
-    const [formData, setFormdata] = useState(initialState);
+    const navigate= useNavigate();
 
+    const getClient = async () => {
+        try {
+            const response = await axios.get(`${URL_CLIENTES}/${id}`);
+            setFormdata(response.data);
+        } catch (error) {
+            console.error("Error al obtener el cliente:", error);
+        }
+    }
+
+    useEffect(() => {
+        getClient();
+    },[]);
 
     const handleChange = (e) => {
         setFormdata({
@@ -34,19 +42,20 @@ function FormClient({onClose,onUpdate}) {
         }
 
         try {
-            const response = await axios.post(URL_CLIENTES, formData);
+            const response = await axios.put(`${URL_CLIENTES}/${id}`, formData);
             alert("Cliente guardado con éxito");
-            
+            //para recargar la pagina
+            onUpdated();
             //para resetear el formulario
-            setFormdata(initialState );
+            setFormdata({});
             //para cerrar el modal
             if(response){
-                onUpdate();
                 onClose();
             }
+
             console.log(formData);
         } catch (error) {
-            console.error("Error al guardar el cliente:", error);
+            console.error("Error al actualizar el cliente:", error);
         }
 
 
@@ -59,23 +68,23 @@ function FormClient({onClose,onUpdate}) {
             <Form onSubmit={handleSubmit}  >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Nombre</Form.Label>
-                    <Form.Control type="nombre" name="nombre" placeholder="Nombre" value={formData.nombre} onChange={handleChange} />
+                    <Form.Control type="text" name="nombre" placeholder="Nombre" value={formData.nombre ||''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>DNI</Form.Label>
-                    <Form.Control type="dni" name="dni" placeholder="DNI" value={formData.dni} onChange={handleChange} />
+                    <Form.Control type="text" name="dni" placeholder="DNI" value={formData.dni ||''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Direccion</Form.Label>
-                    <Form.Control type="direccion" name="direccion" placeholder="Direccion" value={formData.direccion} onChange={handleChange} />
+                    <Form.Control type="text" name="direccion" placeholder="Direccion" value={formData.direccion ||''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Celular</Form.Label>
-                    <Form.Control type="celular" name="celular" placeholder="Celular" value={formData.celular} onChange={handleChange} />
+                    <Form.Control type="text" name="celular" placeholder="Celular" value={formData.celular ||''} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                    <Form.Control type="text" name="email" placeholder="Email" value={formData.email ||''} onChange={handleChange} />
                 </Form.Group>
 
                 <div className=" text-end mt3">
@@ -92,4 +101,4 @@ function FormClient({onClose,onUpdate}) {
     );
 }
 
-export default FormClient;
+export default EditClient;
