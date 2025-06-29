@@ -31,7 +31,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Llamanos en cualquier momento, estamos disponibles las 24 horas para emergencias.
                             </Card.Text>
-                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}} a href="https://wa.me/543816473429" target="_blank" className='w-75'>Contactar</Button>
+                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Contactar</Button>
                         </Card.Body>
                     </Card>
                 </div>
@@ -46,7 +46,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Exámenes clínicos, diagnósticos y seguimiento médico para tus mascotas.
                             </Card.Text>
-                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}} a href="https://wa.me/543816473429" target="_blank" className='w-75'>Solicitar</Button>
+                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Solicitar</Button>
                         </Card.Body>
                     </Card>
                 </div>
@@ -61,7 +61,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Servicios de baño, corte y estética. Dejamos tu Mascota limpia, cómoda y con un estilo nuevo.
                             </Card.Text>
-                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}} a href="https://wa.me/543816473429" target="_blank" className='w-75'>Reservar</Button>
+                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Reservar</Button>
                         </Card.Body>
                     </Card>
                 </div>
@@ -76,7 +76,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Mantené al día la salud de tu mascota con nuestro calendario de vacunas.
                             </Card.Text>
-                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}} a href="https://wa.me/543816473429" target="_blank" className='w-75'> Consultar</Button>
+                            <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'> Consultar</Button>
                         </Card.Body>
                     </Card>
                 </div>
