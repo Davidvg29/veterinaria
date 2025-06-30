@@ -33,7 +33,7 @@ function CardsVet() {
         }
     ]
     return (
-    <div className='d-flex flex-column justify-content-center align-items-center w-100'>
+    <div className='d-flex flex-column justify-content-center align-items-center w-100' style={{ minHeight: '100vh'}}>
         <h1>NUESTROS PROFESIONALES</h1>
 
         <div className='d-flex flex-wrap justify-content-center align-items-center'>
