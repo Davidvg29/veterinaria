@@ -14,7 +14,7 @@ const Banner2 = () => {
         textAlign: 'justify',    
 
         
-        border: '2px solid #8A2BE2', 
+        // border: '2px solid #8A2BE2', 
         padding: '20px',           
         borderRadius: '8px',       
         backgroundColor: '#e6f2ff',

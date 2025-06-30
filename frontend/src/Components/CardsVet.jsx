@@ -1,6 +1,6 @@
-
 import Card from 'react-bootstrap/Card';
 import card6 from "../assets/card6.svg";
+
 
 function CardsVet() {
 
@@ -34,8 +34,16 @@ function CardsVet() {
     ]
     return (
     <div className='d-flex flex-column justify-content-center align-items-center w-100' style={{ minHeight: '100vh'}}>
-        <h1>NUESTROS PROFESIONALES</h1>
-
+        <h1 style={{
+                        fontFamily: 'Segoe UI, sans-serif',
+                        fontSize: '2.8rem',
+                        fontWeight: '700',
+                        color: "rgba(24, 24, 24, 0.74)",
+                        textAlign: 'center',
+                        marginBottom: '2rem'
+                    }}>Nuestros Profesionales</h1>
+        <br/>
+        <br/>
         <div className='d-flex flex-wrap justify-content-center align-items-center'>
         {card.map((carta)=> (
             <Card key={carta.id} className= 'm-1'style={{ width: '18rem' }}>
