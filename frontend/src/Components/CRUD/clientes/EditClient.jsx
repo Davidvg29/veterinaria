@@ -132,6 +132,17 @@ const EditClient = ({id,onClose,onUpdated}) => {
                     <Form.Label>Sexo</Form.Label>
                     <Form.Control type="text" name="sexo" value={mascota.sexo} onChange={(e) => handleMascotaChange(e, index)} />
                     </Form.Group>
+
+                    <Form.Group className="mb-2">
+                    <Form.Label>Historia Clinica</Form.Label>
+                    <Form.Control as="textarea" type="text" name="historiaClinica" value={mascota.historiaClinica} onChange={(e) => handleMascotaChange(e, index)} />
+                    </Form.Group>
+
+                    <Form.Group className="mb-2">
+                    <Form.Label>Otras Observaciones</Form.Label>
+                    <Form.Control as="textarea" type="text" name="observaciones" value={mascota.observaciones} onChange={(e) => handleMascotaChange(e, index)} />
+                    </Form.Group>
+
                 </div>))
                 ) : (<p>Este cliente no tiene mascotas registradas.</p>)
                 }
