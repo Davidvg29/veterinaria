@@ -6,37 +6,37 @@ import logo4 from '../assets/logo4.svg';
  
 function Carrusel() {
   return (
-    <Carousel interval={3000}>
-      <Carousel.Item>
-        <img
-    className="d-block w-100"
+    <Carousel interval={3000} className='rounded-5 p-2 p-md-4 p-lg-5 '>
+      <Carousel.Item className='bg-primary rounded-5'>
+        <img 
+    className="d-block w-100 rounded-5"
     src={logo1}
     alt="First slide"
-    style={{ height: "650px", objectFit: "cover" }}
+    style={{ height: "", objectFit: "cover" }}
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='rounded-5'>
         <img
-      className="d-block w-100"
+      className="d-block w-100 rounded-5"
       src={logo4}
       alt="First slide"
-      style={{ height: "650px", objectFit: "cover" }}
+      style={{ height: "", objectFit: "cover" }}
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='rounded-5'>
         <img
-      className="d-block w-100"
+      className="d-block w-100 rounded-5"
       src={logo3}
       alt="First slide"
-      style={{ height: "650px", objectFit: "cover" }}
+      style={{ height: "", objectFit: "cover" }}
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='rounded-5'>
         <img
-      className="d-block w-100"
+      className="d-block w-100 rounded-5"
       src={logo2}
       alt="First slide"
-      style={{ height: "650px", objectFit: "cover" }}
+      style={{ height: "", objectFit: "cover" }}
         />
       </Carousel.Item>
     </Carousel>

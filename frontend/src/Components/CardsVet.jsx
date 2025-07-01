@@ -33,7 +33,7 @@ function CardsVet() {
         }
     ]
     return (
-    <div className='d-flex flex-column justify-content-center align-items-center w-100' style={{ minHeight: '100vh'}}>
+    <div className='d-flex flex-column justify-content-center align-items-center w-100 mb-5' style={{ minHeight: '100vh'}}>
         <h1 style={{
                         fontFamily: 'Segoe UI, sans-serif',
                         fontSize: '2.8rem',

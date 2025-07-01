@@ -7,7 +7,7 @@ const Banner1 = () => {
     return (
         <>
 
-            <div className="d-flex justify-content-center align-items-center flex-wrap gap-4 p-4" style={{ minHeight: '100vh' }}>
+            <div className="d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 " style={{ minHeight: '100vh' }}>
                 <div>
                     <h1 style={{
                         fontFamily: 'Segoe UI, sans-serif',
