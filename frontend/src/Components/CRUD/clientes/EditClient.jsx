@@ -32,6 +32,21 @@ const EditClient = ({id,onClose,onUpdated}) => {
         });
     };
 
+    const handleMascotaChange = (e, index) => {
+        const { name, value } = e.target;
+        const nuevasMascotas = [...formData.mascotas];
+                nuevasMascotas[index] = {
+                 ...nuevasMascotas[index],
+                [name]: value,
+                };
+        setFormdata({
+        ...formData, mascotas: nuevasMascotas,}
+    );
+    };
+
+
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -86,6 +101,40 @@ const EditClient = ({id,onClose,onUpdated}) => {
                     <Form.Label>Email</Form.Label>
                     <Form.Control type="text" name="email" placeholder="Email" value={formData.email ||''} onChange={handleChange} />
                 </Form.Group>
+
+                <hr />
+                <h4 className="text-center mb-4">Mascotas</h4>
+                {formData.mascotas && formData.mascotas.length > 0 ? 
+                (formData.mascotas.map((mascota, index) => (
+                <div key={mascota.id} className="mb-3 p-3 border rounded">
+                    <h6>Mascota {index + 1}</h6>
+                    <Form.Group className="mb-2">
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control type="text" name="nombre" value={mascota.nombre} onChange={(e) => handleMascotaChange(e, index)} />
+
+                    </Form.Group>
+                    <Form.Group className="mb-2">
+                    <Form.Label>Especie</Form.Label>
+                    <Form.Control type="text" name="especie" value={mascota.especie} onChange={(e) => handleMascotaChange(e, index)} />
+
+                    </Form.Group>
+                    <Form.Group className="mb-2">
+                    <Form.Label>Raza</Form.Label>
+                    <Form.Control type="text" name="raza" value={mascota.raza} onChange={(e) => handleMascotaChange(e, index)} />
+                        
+                    </Form.Group>
+                    <Form.Group className="mb-2">
+                    <Form.Label>Edad</Form.Label>
+                    <Form.Control type="number" name="edad" value={mascota.edad} onChange={(e) => handleMascotaChange(e, index)} /> 
+
+                    </Form.Group>
+                    <Form.Group className="mb-2">
+                    <Form.Label>Sexo</Form.Label>
+                    <Form.Control type="text" name="sexo" value={mascota.sexo} onChange={(e) => handleMascotaChange(e, index)} />
+                    </Form.Group>
+                </div>))
+                ) : (<p>Este cliente no tiene mascotas registradas.</p>)
+                }
 
                 <div className=" text-end mt3">
                     <Button className="m-2" variant="danger" onClick={onClose}>

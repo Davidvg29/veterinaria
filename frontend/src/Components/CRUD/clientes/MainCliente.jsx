@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/esm/Button';
 import FormClient from './FormClient';
 import ViewClient from './ViewClient';
 import EditClient from './EditClient';
+import FormMascota from './FormMascota';
 
 const MainCliente = () => {
     //state de clientes
@@ -70,14 +71,14 @@ const MainCliente = () => {
         cliente.dni.toString().includes(busqueda)
     );
 
-    const borrar = async(id) =>{
+    const borrar = async (id) => {
         try {
-            if(confirm("Estas seguro que deseas eliminar este cliente ")){
+            if (confirm("Estas seguro que deseas eliminar este cliente ")) {
                 await axios.delete(`${URL_CLIENTES}/${id}`);
                 cargarClientes();// Actualiza la lista de clientes después de eliminar
             }
         } catch (error) {
-            console.error("Error al eliminar el cliente:",error);
+            console.error("Error al eliminar el cliente:", error);
         }
     }
 
@@ -89,16 +90,16 @@ const MainCliente = () => {
                         type="text"
                         placeholder="Buscar por nombre o DNI"
                         className=" w-50 mx-3"
-                        style={{width:'700px'}}
+                        style={{ width: '700px' }}
                         value={busqueda}
                         onChange={(e) => setBusqueda(e.target.value)}
                     />
-                    <Button size="sm" variant="success" onClick={() => handleOpenModal("client")} >Crear un nuevo Cliente</Button>
+                    <Button variant="light" style={{ backgroundColor: "rgba(63, 3, 175, 0.5)", color: "#fff" }} onClick={() => handleOpenModal("client")} >Crear un nuevo Cliente</Button>
 
                 </div>
 
 
-                <Table striped bordered hover responsive className='' style={{width:'700px'}}>
+                <Table striped bordered hover responsive className='' style={{ width: '700px' }}>
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -115,10 +116,13 @@ const MainCliente = () => {
                                         <Button className='w-100' size="sm" variant='primary' onClick={() => handleOpenModal("viewClient", cliente.id)}>Ver</Button>
                                     </td>
                                     <td className="text-center">
-                                        <Button className='w-100' size="sm" variant="warning" onClick={() => handleOpenModal("editClient",cliente.id)} >Editar</Button>
+                                        <Button className='w-100' size="sm" variant="warning" onClick={() => handleOpenModal("editClient", cliente.id)} >Editar</Button>
                                     </td>
                                     <td className="text-center">
-                                        <Button className='w-100' size="sm" variant="danger" onClick={() => {borrar(cliente.id)}} >Eliminar</Button>
+                                        <Button className="w-100" size="sm" variant="success"onClick={() => handleOpenModal("addPet", cliente.id)} >Agregar Mascota</Button>
+                                    </td>
+                                    <td className="text-center">
+                                        <Button className='w-100' size="sm" variant="danger" onClick={() => { borrar(cliente.id) }} >Eliminar</Button>
                                     </td>
                                 </tr>
                             ))
@@ -137,9 +141,10 @@ const MainCliente = () => {
                     <Modal.Title>{TITULOS[fromType]}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="d-flex justify-content-center " >
-                    {fromType === "client" && <FormClient onClose={handleCloseModal} onUpdated={cargarClientes}/>}
+                    {fromType === "client" && <FormClient onClose={handleCloseModal} onUpdated={cargarClientes} />}
                     {fromType === "viewClient" && <ViewClient id={clienteId} />}{/*paso el id por prop */}
-                    {fromType === "editClient" && <EditClient id={clienteId} onClose={handleCloseModal} onUpdated={cargarClientes}/>}
+                    {fromType === "editClient" && <EditClient id={clienteId} onClose={handleCloseModal} onUpdated={cargarClientes} />}
+                    {fromType === "addPet" && <FormMascota clienteId={clienteId} onClose={handleCloseModal} onUpdated={cargarClientes} />}
                 </Modal.Body>
 
 
