@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_PRODUCTOS } from '../../../Constants/endpoints';
 import validationFormProduct from '../../../validations/validationsFormProduct';
 
-function Formulario({onClose, onUpdate}) {
+function Formulario({onClose, onUpdated}) {
 
     const initialState = {
         nombre: "",
@@ -44,7 +44,7 @@ function Formulario({onClose, onUpdate}) {
             //para resetear el formulario
             setFormdata(initialState);
             if(response){
-                onUpdate();
+                onUpdated();
                 onClose();
             }
             console.log(formData);

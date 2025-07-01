@@ -94,7 +94,7 @@ const MainProducto = () => {
                         value={busqueda}
                         onChange={(e) => setBusqueda(e.target.value)}
                     />
-                    <Button size="sm" variant="success" onClick={() => handleOpenModal("product")} >Crear un nuevo Producto</Button>
+                    <Button  variant="light" style={{ backgroundColor: "rgba(63, 3, 175, 0.5)", color: "#fff" }}  onClick={() => handleOpenModal("product")} >Crear un nuevo Producto</Button>
 
                 </div>
 
