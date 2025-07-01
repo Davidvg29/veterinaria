@@ -99,16 +99,17 @@ const MainCliente = () => {
                 </div>
 
 
-                <Table striped bordered hover responsive className='' style={{ width: '700px' }}>
+                <div className='' style={{overflowX: 'auto', whiteSpace: 'nowrap' }}>
+                    <Table striped bordered hover responsive className='w-100 table table-striped' style={{overflowX: 'x'}}>
                     <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>DNI</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className=''>
                         {clientesFiltrados.length > 0 ? (
-                            clientesFiltrados.map((cliente) => (
+                            clientesFiltrados.reverse().map((cliente) => (
                                 <tr key={cliente.id}>
                                     <td>{cliente.nombre}</td>
                                     <td>{cliente.dni}</td>
@@ -136,6 +137,7 @@ const MainCliente = () => {
                         )}
                     </tbody>
                 </Table>
+                </div>
             </div>
             <Modal show={showModal} onHide={handleCloseModal} size='lg' centered>
                 <Modal.Header closeButton>
