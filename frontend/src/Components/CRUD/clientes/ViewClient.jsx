@@ -3,24 +3,24 @@ import { URL_CLIENTES } from '../../../Constants/endpoints';
 import axios from 'axios';
 import { Card, Spinner, Alert } from "react-bootstrap";
 
-const ViewClient = ({id}) => {
+const ViewClient = ({ id }) => {
     //se recibe el id como prop
     
-    const [cliente,setCliente] = useState(null);
+    const [cliente, setCliente] = useState(null);
 
-    useEffect(()=>{
-        if(!id) return;
+    useEffect(() => {
+        if (!id) return;
 
-        const getClient = async () =>{ 
+        const getClient = async () => {
             try {
-                const response=await axios.get(`${URL_CLIENTES}/${id}`);
+                const response = await axios.get(`${URL_CLIENTES}/${id}`);
                 setCliente(response.data);
             } catch (error) {
-                console.error("Error al obtener el cliente:",error);
+                console.error("Error al obtener el cliente:", error);
             }
         };
         getClient();
-    },[id])
+    }, [id]);
 
     if (!cliente) return <p>Cargando cliente...</p>;
 
@@ -33,11 +33,25 @@ const ViewClient = ({id}) => {
                     <Card.Text><strong>Dirección:</strong> {cliente.direccion}</Card.Text>
                     <Card.Text><strong>Celular:</strong> {cliente.celular}</Card.Text>
                     <Card.Text><strong>Email:</strong> {cliente.email}</Card.Text>
+
+                    {/* Aquí agregamos las mascotas */}
+                    {cliente.mascotas && cliente.mascotas.length > 0 ? (
+                        <>
+                            <hr />
+                            <h5>Mascotas</h5>
+                            <ul>
+                                {cliente.mascotas.map((m) => (
+                                    <li key={m.id}> <strong>{m.nombre}</strong> — {m.especie} ({m.raza}), {m.edad} años, {m.sexo}.</li>
+                                ))
+                                }
+                            </ul>
+                        </>
+                    ) : (<p className="mt-3"><em>Este cliente no tiene mascotas registradas.</em></p>)
+                    }
                 </Card.Body>
             </Card>
-
         </>
-    )
-}
+    );
+};
 
-export default ViewClient
+export default ViewClient;

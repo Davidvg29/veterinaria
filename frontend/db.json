@@ -120,7 +120,33 @@
       "dni": "37957766",
       "direccion": "Sarmiento 497 BRS",
       "celular": "3816689634",
-      "email": "joaquindiaz2103@gmail.com"
+      "email": "joaquindiaz2103@gmail.com",
+      "mascotas": [
+        {
+          "id": 1,
+          "nombre": "Firulais",
+          "especie": "Perro",
+          "raza": "Labrador",
+          "edad": 4,
+          "sexo": "Macho"
+        },
+        {
+          "nombre": "pepito",
+          "especie": "gato",
+          "raza": "siames",
+          "edad": "1",
+          "sexo": "macho",
+          "id": 1751346961886
+        },
+        {
+          "nombre": "Angel",
+          "especie": "conejo",
+          "raza": "mestizo",
+          "edad": "2",
+          "sexo": "macho",
+          "id": 1751347753263
+        }
+      ]
     },
     {
       "id": "2",
@@ -128,7 +154,17 @@
       "dni": "40123456",
       "direccion": "Av. Belgrano 1250",
       "celular": "3816001122",
-      "email": "luciaf@gmail.com"
+      "email": "luciaf@gmail.com",
+      "mascotas": [
+        {
+          "id": 2,
+          "nombre": "Misha",
+          "especie": "Gato",
+          "raza": "Siames",
+          "edad": 2,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "3",
@@ -136,7 +172,17 @@
       "dni": "38876543",
       "direccion": "San Martín 833",
       "celular": "3816547890",
-      "email": "martinlopez89@hotmail.com"
+      "email": "martinlopez89@hotmail.com",
+      "mascotas": [
+        {
+          "id": 3,
+          "nombre": "Toby",
+          "especie": "Perro",
+          "raza": "Bulldog Francés",
+          "edad": 3,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "4",
@@ -144,7 +190,17 @@
       "dni": "39543218",
       "direccion": "Mitre 1024",
       "celular": "3816677889",
-      "email": "valengomez@yahoo.com"
+      "email": "valengomez@yahoo.com",
+      "mascotas": [
+        {
+          "id": 4,
+          "nombre": "Luna",
+          "especie": "Gato",
+          "raza": "Persa",
+          "edad": 5,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "5",
@@ -152,7 +208,17 @@
       "dni": "41234567",
       "direccion": "Rivadavia 345",
       "celular": "3816123456",
-      "email": "lucasmartinez@hotmail.com"
+      "email": "lucasmartinez@hotmail.com",
+      "mascotas": [
+        {
+          "id": 5,
+          "nombre": "Rocky",
+          "especie": "Perro",
+          "raza": "Boxer",
+          "edad": 6,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "6",
@@ -160,7 +226,17 @@
       "dni": "39012345",
       "direccion": "Alsina 1111",
       "celular": "3816234567",
-      "email": "camitorres@gmail.com"
+      "email": "camitorres@gmail.com",
+      "mascotas": [
+        {
+          "id": 6,
+          "nombre": "Nala",
+          "especie": "Gato",
+          "raza": "Mestizo",
+          "edad": 1,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "7",
@@ -168,7 +244,17 @@
       "dni": "38456789",
       "direccion": "Corrientes 450",
       "celular": "3816987456",
-      "email": "diego.ramirez@gmail.com"
+      "email": "diego.ramirez@gmail.com",
+      "mascotas": [
+        {
+          "id": 7,
+          "nombre": "Simba",
+          "especie": "Perro",
+          "raza": "Golden Retriever",
+          "edad": 7,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "8",
@@ -176,7 +262,17 @@
       "dni": "40678901",
       "direccion": "Entre Ríos 789",
       "celular": "3816999888",
-      "email": "florherrera@yahoo.com"
+      "email": "florherrera@yahoo.com",
+      "mascotas": [
+        {
+          "id": 8,
+          "nombre": "Milo",
+          "especie": "Gato",
+          "raza": "Bengalí",
+          "edad": 4,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "9",
@@ -184,7 +280,17 @@
       "dni": "38765432",
       "direccion": "La Rioja 620",
       "celular": "3816554321",
-      "email": "facundoruiz@outlook.com"
+      "email": "facundoruiz@outlook.com",
+      "mascotas": [
+        {
+          "id": 9,
+          "nombre": "Canela",
+          "especie": "Perro",
+          "raza": "Cocker Spaniel",
+          "edad": 3,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "10",
@@ -192,7 +298,17 @@
       "dni": "39234567",
       "direccion": "Catamarca 233",
       "celular": "3816888777",
-      "email": "solrios@gmail.com"
+      "email": "solrios@gmail.com",
+      "mascotas": [
+        {
+          "id": 10,
+          "nombre": "Cleo",
+          "especie": "Gato",
+          "raza": "Maine Coon",
+          "edad": 5,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "11",
@@ -200,7 +316,17 @@
       "dni": "37890123",
       "direccion": "Lavalle 998",
       "celular": "3816777123",
-      "email": "nicososa@hotmail.com"
+      "email": "nicososa@hotmail.com",
+      "mascotas": [
+        {
+          "id": 11,
+          "nombre": "Max",
+          "especie": "Perro",
+          "raza": "Dálmata",
+          "edad": 2,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "12",
@@ -208,7 +334,17 @@
       "dni": "39654321",
       "direccion": "Av. Salta 1122",
       "celular": "3816444555",
-      "email": "brendacastro@gmail.com"
+      "email": "brendacastro@gmail.com",
+      "mascotas": [
+        {
+          "id": 12,
+          "nombre": "Tina",
+          "especie": "Gato",
+          "raza": "Angora",
+          "edad": 6,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "13",
@@ -216,7 +352,17 @@
       "dni": "40567890",
       "direccion": "Chacabuco 390",
       "celular": "3816333444",
-      "email": "agustinmolina@gmail.com"
+      "email": "agustinmolina@gmail.com",
+      "mascotas": [
+        {
+          "id": 13,
+          "nombre": "Bruno",
+          "especie": "Perro",
+          "raza": "Pitbull",
+          "edad": 3,
+          "sexo": "Macho"
+        }
+      ]
     },
     {
       "id": "14",
@@ -224,7 +370,17 @@
       "dni": "39987654",
       "direccion": "Tucumán 765",
       "celular": "3816007890",
-      "email": "sofianav@gmail.com"
+      "email": "sofianav@gmail.com",
+      "mascotas": [
+        {
+          "id": 14,
+          "nombre": "Sasha",
+          "especie": "Gato",
+          "raza": "Europeo",
+          "edad": 4,
+          "sexo": "Hembra"
+        }
+      ]
     },
     {
       "id": "15",
@@ -232,7 +388,71 @@
       "dni": "38678901",
       "direccion": "Maipú 111",
       "celular": "3816111222",
-      "email": "tomasaguirre@gmail.com"
+      "email": "tomasaguirre@gmail.com",
+      "mascotas": [
+        {
+          "id": 15,
+          "nombre": "Choco",
+          "especie": "Perro",
+          "raza": "Beagle",
+          "edad": 2,
+          "sexo": "Macho"
+        }
+      ]
+    },
+    {
+      "id": "e1e7",
+      "nombre": "pepe",
+      "dni": "37955461",
+      "direccion": "lastenia",
+      "celular": "3812193799",
+      "email": "joaqqo4961@gmail.com",
+      "mascotas": [
+        {
+          "nombre": "pepito",
+          "especie": "perro",
+          "raza": "mestizo",
+          "edad": "22",
+          "sexo": "macho",
+          "id": 1751343638987
+        }
+      ]
+    },
+    {
+      "id": "1fbf",
+      "nombre": "Joaquin Diaz",
+      "dni": "37958866",
+      "direccion": "joasda22",
+      "celular": "3816689651",
+      "email": "joaquindiaz2103@gmail.com",
+      "mascotas": [
+        {
+          "nombre": "pepito",
+          "especie": "gato",
+          "raza": "mestizo",
+          "edad": "3",
+          "sexo": "macho",
+          "id": 1751345567699
+        }
+      ]
+    },
+    {
+      "id": "4327",
+      "nombre": "Joaquin gonzalezzz",
+      "dni": "12365472",
+      "direccion": "joasda22",
+      "celular": "232321321321",
+      "email": "jaosjdoa@dsads.com",
+      "mascotas": [
+        {
+          "nombre": "Joaquin",
+          "especie": "gato",
+          "raza": "mestizo",
+          "edad": "31",
+          "sexo": "macho",
+          "id": 1751345785168
+        }
+      ]
     }
   ]
 }
