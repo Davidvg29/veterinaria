@@ -128,7 +128,9 @@
           "especie": "Perro",
           "raza": "Labrador",
           "edad": 4,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         },
         {
           "nombre": "pepito",
@@ -136,6 +138,8 @@
           "raza": "siames",
           "edad": "1",
           "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
           "id": 1751346961886
         },
         {
@@ -144,6 +148,8 @@
           "raza": "mestizo",
           "edad": "2",
           "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
           "id": 1751347753263
         }
       ]
@@ -162,7 +168,9 @@
           "especie": "Gato",
           "raza": "Siames",
           "edad": 2,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -180,7 +188,9 @@
           "especie": "Perro",
           "raza": "Bulldog Francés",
           "edad": 3,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -198,7 +208,9 @@
           "especie": "Gato",
           "raza": "Persa",
           "edad": 5,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -216,7 +228,9 @@
           "especie": "Perro",
           "raza": "Boxer",
           "edad": 6,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -234,7 +248,9 @@
           "especie": "Gato",
           "raza": "Mestizo",
           "edad": 1,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -252,7 +268,9 @@
           "especie": "Perro",
           "raza": "Golden Retriever",
           "edad": 7,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -270,7 +288,9 @@
           "especie": "Gato",
           "raza": "Bengalí",
           "edad": 4,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -288,7 +308,9 @@
           "especie": "Perro",
           "raza": "Cocker Spaniel",
           "edad": 3,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -306,7 +328,9 @@
           "especie": "Gato",
           "raza": "Maine Coon",
           "edad": 5,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -324,7 +348,9 @@
           "especie": "Perro",
           "raza": "Dálmata",
           "edad": 2,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -342,7 +368,9 @@
           "especie": "Gato",
           "raza": "Angora",
           "edad": 6,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -360,7 +388,9 @@
           "especie": "Perro",
           "raza": "Pitbull",
           "edad": 3,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -378,7 +408,9 @@
           "especie": "Gato",
           "raza": "Europeo",
           "edad": 4,
-          "sexo": "Hembra"
+          "sexo": "Hembra",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -396,7 +428,9 @@
           "especie": "Perro",
           "raza": "Beagle",
           "edad": 2,
-          "sexo": "Macho"
+          "sexo": "Macho",
+          "historiaClinica": "",
+          "observaciones": ""
         }
       ]
     },
@@ -414,6 +448,8 @@
           "raza": "mestizo",
           "edad": "22",
           "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
           "id": 1751343638987
         }
       ]
@@ -432,6 +468,8 @@
           "raza": "mestizo",
           "edad": "3",
           "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
           "id": 1751345567699
         }
       ]
@@ -450,7 +488,29 @@
           "raza": "mestizo",
           "edad": "31",
           "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
           "id": 1751345785168
+        }
+      ]
+    },
+    {
+      "id": "9a0c",
+      "nombre": "Homero Simpson",
+      "dni": "28745562",
+      "direccion": "Av. Siempre Viva 346",
+      "celular": "3812664665",
+      "email": "homerosimpson1@gmail.com",
+      "mascotas": [
+        {
+          "nombre": "Huesos",
+          "especie": "Perro",
+          "raza": "Galgo",
+          "edad": "4",
+          "sexo": "Macho",
+          "historiaClinica": "No tiene",
+          "observaciones": "Sin observaciones",
+          "id": 1751392293752
         }
       ]
     }
