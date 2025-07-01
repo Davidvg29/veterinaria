@@ -521,6 +521,36 @@
           "id": 1751392293752
         }
       ]
+    },
+    {
+      "id": "ea55",
+      "nombre": "david valdez",
+      "dni": "43501432",
+      "direccion": "vallistos 200 m6 c21",
+      "celular": "3813965671",
+      "email": "davidpivito@gmail.com",
+      "mascotas": [
+        {
+          "nombre": "chimu",
+          "especie": "gato",
+          "raza": "callejero",
+          "edad": "1",
+          "sexo": "macho",
+          "historiaClinica": "ninguna",
+          "observaciones": "ninguna",
+          "id": 1751407034129
+        },
+        {
+          "nombre": "pedro",
+          "especie": "loro",
+          "raza": "ave",
+          "edad": "1",
+          "sexo": "macho",
+          "historiaClinica": "",
+          "observaciones": "",
+          "id": 1751407062115
+        }
+      ]
     }
   ]
 }

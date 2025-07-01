@@ -26,7 +26,7 @@ function FormClient({ onClose, onUpdated }) {
         observaciones: ""
     };
 
-    const [formMascota, setFormMascota] = useState(initialMascota);
+    // const [formMascota, setFormMascota] = useState(initialMascota);
 
 
     const handleChange = (e) => {
@@ -36,12 +36,12 @@ function FormClient({ onClose, onUpdated }) {
         });
     };
 
-    const handleChangeMascota = (e) => {
-        setFormMascota({
-            ...formMascota,
-            [e.target.name]: e.target.value
-        });
-    };
+    // const handleChangeMascota = (e) => {
+    //     setFormMascota({
+    //         ...formMascota,
+    //         [e.target.name]: e.target.value
+    //     });
+    // };
 
 
     const handleSubmit = async (e) => {
@@ -53,10 +53,10 @@ function FormClient({ onClose, onUpdated }) {
         }
 
         try {
-            const mascotaConId = { ...formMascota, id: Date.now() };
+            // const mascotaConId = { ...formMascota, id: Date.now() };
             const clienteConMascota = {
                 ...formData,
-                mascotas: [mascotaConId]
+                mascotas: []
             };
 
             const response = await axios.post(URL_CLIENTES, clienteConMascota);
@@ -64,7 +64,7 @@ function FormClient({ onClose, onUpdated }) {
 
             //para resetear el formulario
             setFormdata(initialState);
-            setFormMascota(initialMascota);
+            // setFormMascota(initialMascota);
             //para cerrar el modal
             if (response) {
                 onUpdated();
@@ -105,7 +105,7 @@ function FormClient({ onClose, onUpdated }) {
                 </Form.Group>
 
                 <hr />
-                <h4 className="text-center my-3">Datos de la Mascota</h4>
+                {/* <h4 className="text-center my-3">Datos de la Mascota</h4>
 
                 <Form.Group className="mb-3">
                     <Form.Label>Nombre</Form.Label>
@@ -139,7 +139,7 @@ function FormClient({ onClose, onUpdated }) {
                 <Form.Group className="mb-3">
                     <Form.Label>Otras Observaciones</Form.Label>
                     <Form.Control as="textarea" type="text" name="observaciones" placeholder="Otras Observaciones..." value={formMascota.observaciones} onChange={handleChangeMascota} />
-                </Form.Group>
+                </Form.Group> */}
 
                 <div className=" text-end mt3">
                     <Button className="m-2" variant="danger" onClick={onClose}>Cancelar</Button>

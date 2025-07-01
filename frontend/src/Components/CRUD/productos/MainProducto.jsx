@@ -108,7 +108,7 @@ const MainProducto = () => {
                     </thead>
                     <tbody>
                         {productosFiltrados.length > 0 ? (
-                            productosFiltrados.map((producto) => (
+                            productosFiltrados.reverse().map((producto) => (
                                 <tr key={producto.id}>
                                     <td>{producto.nombre}</td>
                                     <td>{producto.codigo}</td>

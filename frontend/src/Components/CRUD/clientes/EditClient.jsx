@@ -78,9 +78,9 @@ const EditClient = ({id,onClose,onUpdated}) => {
     };
 
     return (
-        <div className="bg-white p-4 rounded-3 shadow text-dark w-50 ">
+        <div className="bg-white p-4 rounded-3 shadow text-dark w-100  ">
             <h3 className="text-center mb-4">Formulario de Clientes</h3>
-            <Form onSubmit={handleSubmit}  >
+            <Form onSubmit={handleSubmit} className='px-5' >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" name="nombre" placeholder="Nombre" value={formData.nombre ||''} onChange={handleChange} />
