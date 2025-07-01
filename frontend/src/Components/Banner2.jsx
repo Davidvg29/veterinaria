@@ -2,32 +2,41 @@ import img from "../assets/Banner2.png"; // Asegúrate de que la ruta sea correc
 
 const Banner2 = () => {
   return (
-    <div className="d-flex justify-content-end"> 
-      <img className="d-flex justify-content-end" src={img} alt="ATENDEMOS LAS 24HS"
-        style={{ maxWidth: '50%', height: '50%' }}
-      />
-      <p  className="d-flex justify-content-end align-items-center" style={{
-        fontSize: '1.4em',       
-        fontWeight: 'bold',      
-        color: '#333',          
-        lineHeight: '1.5',     
-        textAlign: 'justify',    
+    <div className="d-flex flex-column flex-md-row p-5 m-0 rounded-5" style={{ alignItems: 'stretch', gap: 0}}>
+  {/* Imagen */}
+  <div className="me-md-3 mb-3 mb-md-0" style={{ flex: '1 1 50%' }}>
+    <img
+      src={img}
+      alt="ATENDEMOS LAS 24HS"
+      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0px' }}
+      className="rounded-5"
+    />
+  </div>
 
-        
-        border: '2px solid #8A2BE2', 
-        padding: '20px',           
-        borderRadius: '8px',       
-        backgroundColor: '#e6f2ff',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Sombra suave para darle profundidad (opcional)
-        // --- FIN ESTILOS PARA EL MARCO ---
-
-        // Asegura que el párrafo no tenga márgenes por defecto que afecten el layout
-        margin: '0',
-        flexGrow: 1 // Permite que el párrafo ocupe el espacio restante en flexbox
-      }}>
-        Somos VET SOFT, con más de 20 años de trayectoria en el rubro. Contamos con un gran equipo ; disponibles para asesorarte cuando lo necesites. Servicio de urgencias disponible todo el día, con cirujanos altamente capacitados y quirófanos de última tecnología. Realizamos todo tipo de intervenciones con estándares internacionales.
-      </p>
-    </div>
+  {/* Texto */}
+  <div
+    className="d-flex rounded-5"
+    style={{
+      flex: '1 1 50%',
+      backgroundColor: '#e6f2ff',
+      padding: '10px',
+      borderRadius: '0px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      alignItems: 'center',
+    }}
+  >
+    <p style={{
+      fontSize: '1.1rem',
+      fontWeight: 'bold',
+      color: '#333',
+      // lineHeight: '1.6',
+      textAlign: 'center',
+      margin: 0
+    }}>
+      Somos <strong>SOFT VET</strong>, con más de 20 años de trayectoria en el rubro. Contamos con un gran equipo, disponibles para asesorarte cuando lo necesites. Servicio de urgencias disponible todo el día, con cirujanos altamente capacitados y quirófanos de última tecnología. Realizamos todo tipo de intervenciones con estándares internacionales.
+    </p>
+  </div>
+</div>
   );
 }
 

@@ -84,12 +84,13 @@ const MainProducto = () => {
 
     return (
         <>
-            <div className="w-100">
-                <div>
+            <div className="w-100 d-flex justify-content-center align-items-center flex-column mb-5">
+                <div className=' d-flex justify-content-center align-items-center m-3 w-75' >
                     <Form.Control
                         type="text"
                         placeholder="Buscar por nombre o codigo"
-                        className="w-50 mb-3"
+                        className="w-50 mx-3"
+                        style={{width:'700px'}}
                         value={busqueda}
                         onChange={(e) => setBusqueda(e.target.value)}
                     />
@@ -98,7 +99,7 @@ const MainProducto = () => {
                 </div>
 
 
-                <Table striped bordered hover responsive size="sm">
+                <Table striped bordered hover responsive size="sm" style={{width:'700px'}}>
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -112,13 +113,13 @@ const MainProducto = () => {
                                     <td>{producto.nombre}</td>
                                     <td>{producto.codigo}</td>
                                     <td>
-                                        <Button size="sm" variant='primary' onClick={() => handleOpenModal("viewProduct", producto.id)}>Ver</Button>
+                                        <Button className='w-100' size="sm" variant='primary' onClick={() => handleOpenModal("viewProduct", producto.id)}>Ver</Button>
                                     </td>
                                     <td className="text-center">
-                                        <Button size="sm" variant="warning" onClick={() => handleOpenModal("editProduct",producto.id)} >Editar</Button>
+                                        <Button className='w-100' size="sm" variant="warning" onClick={() => handleOpenModal("editProduct",producto.id)} >Editar</Button>
                                     </td>
                                     <td className="text-center">
-                                        <Button size="sm" variant="danger" onClick={() => {borrar(producto.id)}} >Eliminar</Button>
+                                        <Button className='w-100' size="sm" variant="danger" onClick={() => {borrar(producto.id)}} >Eliminar</Button>
                                     </td>
                                 </tr>
                             ))

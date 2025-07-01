@@ -7,13 +7,13 @@ const Banner1 = () => {
     return (
         <>
 
-            <div className="d-flex justify-content-center align-items-center flex-wrap gap-4 p-4" style={{ minHeight: '100vh' }}>
+            <div className="d-flex justify-content-center align-items-center flex-wrap gap-4 p-4 " style={{ minHeight: '100vh' }}>
                 <div>
                     <h1 style={{
                         fontFamily: 'Segoe UI, sans-serif',
                         fontSize: '2.8rem',
-                        fontWeight: '500',
-                        color: "rgba(37, 37, 37, 0.74)",
+                        fontWeight: '700',
+                        color: "rgba(20, 20, 20, 0.74)",
                         textAlign: 'center',
                         marginBottom: '2rem'
                     }}>
@@ -31,6 +31,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Llamanos en cualquier momento, estamos disponibles las 24 horas para emergencias.
                             </Card.Text>
+                            <br/>
                             <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Contactar</Button>
                         </Card.Body>
                     </Card>
@@ -46,6 +47,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Exámenes clínicos, diagnósticos y seguimiento médico para tus mascotas.
                             </Card.Text>
+                            <br/>
                             <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Solicitar</Button>
                         </Card.Body>
                     </Card>
@@ -61,6 +63,7 @@ const Banner1 = () => {
                             <Card.Text className="text-muted">
                                 Servicios de baño, corte y estética. Dejamos tu Mascota limpia, cómoda y con un estilo nuevo.
                             </Card.Text>
+                            <br/>
                             <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'>Reservar</Button>
                         </Card.Body>
                     </Card>
@@ -69,13 +72,14 @@ const Banner1 = () => {
                 <div>
                     <Card style={{ width: '18rem', textAlign: 'center' }} className="shadow-sm">
                         <div className="mt-4">
-                            <i className="bi bi-capsule" style={{ fontSize: '4.5rem', color: 'red' }}></i>
+                            <i className="bi bi-calendar3" style={{ fontSize: '4.5rem', color: 'red' }}></i>
                         </div>
                         <Card.Body>
                             <Card.Title>Vacunación</Card.Title>
                             <Card.Text className="text-muted">
                                 Mantené al día la salud de tu mascota con nuestro calendario de vacunas.
                             </Card.Text>
+                            <br/>
                             <Button style={{backgroundColor:"rgba(102, 4, 168, 0.5)", border: "none"}}  href="https://wa.me/543816473429" target="_blank" className='w-75'> Consultar</Button>
                         </Card.Body>
                     </Card>
