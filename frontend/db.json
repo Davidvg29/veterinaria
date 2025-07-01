@@ -111,6 +111,24 @@
       "animal": "perro",
       "precio": 20000,
       "stock": 5
+    },
+    {
+      "id": "633b",
+      "nombre": "pelota ",
+      "codigo": "02154",
+      "categoria": "juguete",
+      "animal": "varios",
+      "precio": 1500,
+      "stock": 5
+    },
+    {
+      "id": "e7f3",
+      "nombre": "pelotita",
+      "codigo": "45444",
+      "categoria": "juguete",
+      "animal": "vario",
+      "precio": 1200,
+      "stock": 5
     }
   ],
   "clientes": [
@@ -549,6 +567,16 @@
           "historiaClinica": "",
           "observaciones": "",
           "id": 1751407062115
+        },
+        {
+          "nombre": "miau",
+          "especie": "perro",
+          "raza": "siames",
+          "edad": "1",
+          "sexo": "no sabemos",
+          "historiaClinica": "",
+          "observaciones": "",
+          "id": 1751411449428
         }
       ]
     }
