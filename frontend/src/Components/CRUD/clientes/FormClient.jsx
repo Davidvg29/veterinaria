@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
 
-function FormClient({onClose,onUpdated}) {
+function FormClient({ onClose, onUpdated }) {
 
     const initialState = {
         nombre: "",
@@ -21,7 +21,9 @@ function FormClient({onClose,onUpdated}) {
         especie: "",
         raza: "",
         edad: "",
-        sexo: ""
+        sexo: "",
+        historiaClinica: "",
+        observaciones: ""
     };
 
     const [formMascota, setFormMascota] = useState(initialMascota);
@@ -59,12 +61,12 @@ function FormClient({onClose,onUpdated}) {
 
             const response = await axios.post(URL_CLIENTES, clienteConMascota);
             alert("Cliente guardado con éxito");
-            
+
             //para resetear el formulario
-            setFormdata(initialState );
+            setFormdata(initialState);
             setFormMascota(initialMascota);
             //para cerrar el modal
-            if(response){
+            if (response) {
                 onUpdated();
                 onClose();
             }
@@ -106,28 +108,37 @@ function FormClient({onClose,onUpdated}) {
                 <h4 className="text-center my-3">Datos de la Mascota</h4>
 
                 <Form.Group className="mb-3">
-                <Form.Label>Nombre</Form.Label>
-                <Form.Control type="text" name="nombre" placeholder="Nombre de la mascota" value={formMascota.nombre} onChange={handleChangeMascota}/>
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control type="text" name="nombre" placeholder="Nombre de la mascota" value={formMascota.nombre} onChange={handleChangeMascota} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                <Form.Label>Especie</Form.Label>
-                <Form.Control type="text" name="especie" placeholder="Perro, Gato, etc." value={formMascota.especie} onChange={handleChangeMascota}/>
+                    <Form.Label>Especie</Form.Label>
+                    <Form.Control type="text" name="especie" placeholder="Perro, Gato, etc." value={formMascota.especie} onChange={handleChangeMascota} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                <Form.Label>Raza</Form.Label>
-                <Form.Control type="text" name="raza" placeholder="Raza" value={formMascota.raza} onChange={handleChangeMascota}/>
+                    <Form.Label>Raza</Form.Label>
+                    <Form.Control type="text" name="raza" placeholder="Raza" value={formMascota.raza} onChange={handleChangeMascota} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                <Form.Label>Edad</Form.Label>
-                <Form.Control type="number" name="edad" placeholder="Edad" value={formMascota.edad} onChange={handleChangeMascota}/>
+                    <Form.Label>Edad</Form.Label>
+                    <Form.Control type="number" name="edad" placeholder="Edad" value={formMascota.edad} onChange={handleChangeMascota} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                <Form.Label>Sexo</Form.Label>
-                <Form.Control type="text" name="sexo" placeholder="Macho / Hembra" value={formMascota.sexo} onChange={handleChangeMascota}/>
+                    <Form.Label>Sexo</Form.Label>
+                    <Form.Control type="text" name="sexo" placeholder="Macho / Hembra" value={formMascota.sexo} onChange={handleChangeMascota} />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Historia Clinica</Form.Label>
+                    <Form.Control as="textarea" type="text" name="historiaClinica" placeholder="Observaciones..." value={formMascota.historiaClinica} onChange={handleChangeMascota} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Otras Observaciones</Form.Label>
+                    <Form.Control as="textarea" type="text" name="observaciones" placeholder="Otras Observaciones..." value={formMascota.observaciones} onChange={handleChangeMascota} />
                 </Form.Group>
 
                 <div className=" text-end mt3">

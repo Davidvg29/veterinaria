@@ -118,11 +118,12 @@ const MainCliente = () => {
                                     <td className="text-center">
                                         <Button className='w-100' size="sm" variant="warning" onClick={() => handleOpenModal("editClient", cliente.id)} >Editar</Button>
                                     </td>
-                                    <td className="text-center">
-                                        <Button className="w-100" size="sm" variant="success"onClick={() => handleOpenModal("addPet", cliente.id)} >Agregar Mascota</Button>
-                                    </td>
+                                
                                     <td className="text-center">
                                         <Button className='w-100' size="sm" variant="danger" onClick={() => { borrar(cliente.id) }} >Eliminar</Button>
+                                    </td>
+                                     <td className="text-center">
+                                        <Button className="w-100" size="sm" variant="success"onClick={() => handleOpenModal("addPet", cliente.id)} >Agregar Mascota</Button>
                                     </td>
                                 </tr>
                             ))

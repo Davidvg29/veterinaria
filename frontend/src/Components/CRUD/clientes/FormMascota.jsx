@@ -10,7 +10,9 @@ const FormMascota = ({ clienteId, onClose, onUpdated }) => {
         especie: "",
         raza: "",
         edad: "",
-        sexo: ""
+        sexo: "",
+        historiaClinica: "",
+        observaciones: ""
     });
 
     const handleChange = (e) => {
@@ -61,6 +63,14 @@ const FormMascota = ({ clienteId, onClose, onUpdated }) => {
             <Form.Group className="mb-3">
                 <Form.Label>Sexo</Form.Label>
                 <Form.Control type="text" name="sexo" placeholder="Macho / Hembra" value={mascota.sexo} onChange={handleChange} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Historia Clinica</Form.Label>
+                <Form.Control as="textarea" type="text" name="historiaClinica" placeholder="Observaciones..." value={mascota.historiaClinica} onChange={handleChange} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Otras Observaciones</Form.Label>
+                <Form.Control as="textarea" type="text" name="observaciones" placeholder="Otras Observaciones..." value={mascota.observaciones} onChange={handleChange} />
             </Form.Group>
            <div className=" text-end mt3">
                     <Button className="m-2" variant="danger" onClick={onClose}>
