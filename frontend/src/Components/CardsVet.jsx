@@ -1,35 +1,42 @@
 import Card from 'react-bootstrap/Card';
 import card6 from "../assets/card6.svg";
-
+import imgvet1 from "../assets/imgvet1.svg";
+import imgvet2 from "../assets/imgvet2.svg";
+import imgvet3 from "../assets/imgvet3.svg";
+import imgvet4 from "../assets/imgvet4.svg";
 
 function CardsVet() {
 
     const card = [
         {
             id: 1,
-            img : card6,
-            titulo: "JUAN PEREZ",
-            mp: "MP 24.510"
+            img : imgvet1,
+            titulo: "ANA PEDRAZA",
+            mp: "MP 24.510",
+            descripcion: "Especialista en medicina general y cuidados preventivos en animales."
         },
         {
             id: 2,
-            img: card6,
+            img: imgvet2,
             titulo: "JOAQUIN DIAZ",
-            mp: "MP 51.254"
+            mp: "MP 51.254",
+            descripcion: "Experto en cirugía veterinaria y tratamientos de emergencia."
         },
 
         {
             id: 3,
-            img: card6,
-            titulo: "JORGE TORRES",
-            mp:"MP 51.245"
+            img: imgvet3,
+            titulo: "LAURA CASTILLO",
+            mp:"MP 51.245",
+            descripcion: "Profesional en salud animal con enfoque en nutrición y bienestar."
         },
 
         {
             id: 4,
-            img: card6,
-            titulo: "JUAN MORA",
-            mp: "MP 12.365"
+            img: imgvet4,
+            titulo: "JUANA MORALES",
+            mp: "MP 12.365",
+            descripcion: "Veterinario clínico con experiencia en animales exóticos y silvestres."
         }
     ]
     return (
@@ -51,6 +58,7 @@ function CardsVet() {
       <Card.Body>
         <Card.Title className="d-flex justify-content-center">{carta.titulo}</Card.Title>
         <Card.Text className="d-flex justify-content-center">{carta.mp}</Card.Text>
+        <Card.Text className="d-flex justify-content-center">{carta.descripcion}</Card.Text>
       </Card.Body>
     </Card>
         ) )}
