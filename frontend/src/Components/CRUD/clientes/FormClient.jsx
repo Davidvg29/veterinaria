@@ -5,7 +5,7 @@ import axios from "axios";
 import { URL_CLIENTES } from '../../../Constants/endpoints';
 import validationFormCliente from '../../../validations/validationsFormCliente';
 
-function FormClient({onClose,onUpdate}) {
+function FormClient({onClose,onUpdated}) {
 
     const initialState = {
         nombre: "",
@@ -16,10 +16,27 @@ function FormClient({onClose,onUpdate}) {
     };
     const [formData, setFormdata] = useState(initialState);
 
+    const initialMascota = {
+        nombre: "",
+        especie: "",
+        raza: "",
+        edad: "",
+        sexo: ""
+    };
+
+    const [formMascota, setFormMascota] = useState(initialMascota);
+
 
     const handleChange = (e) => {
         setFormdata({
             ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleChangeMascota = (e) => {
+        setFormMascota({
+            ...formMascota,
             [e.target.name]: e.target.value
         });
     };
@@ -34,14 +51,21 @@ function FormClient({onClose,onUpdate}) {
         }
 
         try {
-            const response = await axios.post(URL_CLIENTES, formData);
+            const mascotaConId = { ...formMascota, id: Date.now() };
+            const clienteConMascota = {
+                ...formData,
+                mascotas: [mascotaConId]
+            };
+
+            const response = await axios.post(URL_CLIENTES, clienteConMascota);
             alert("Cliente guardado con éxito");
             
             //para resetear el formulario
             setFormdata(initialState );
+            setFormMascota(initialMascota);
             //para cerrar el modal
             if(response){
-                onUpdate();
+                onUpdated();
                 onClose();
             }
             console.log(formData);
@@ -78,10 +102,36 @@ function FormClient({onClose,onUpdate}) {
                     <Form.Control type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
                 </Form.Group>
 
+                <hr />
+                <h4 className="text-center my-3">Datos de la Mascota</h4>
+
+                <Form.Group className="mb-3">
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control type="text" name="nombre" placeholder="Nombre de la mascota" value={formMascota.nombre} onChange={handleChangeMascota}/>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                <Form.Label>Especie</Form.Label>
+                <Form.Control type="text" name="especie" placeholder="Perro, Gato, etc." value={formMascota.especie} onChange={handleChangeMascota}/>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                <Form.Label>Raza</Form.Label>
+                <Form.Control type="text" name="raza" placeholder="Raza" value={formMascota.raza} onChange={handleChangeMascota}/>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                <Form.Label>Edad</Form.Label>
+                <Form.Control type="number" name="edad" placeholder="Edad" value={formMascota.edad} onChange={handleChangeMascota}/>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                <Form.Label>Sexo</Form.Label>
+                <Form.Control type="text" name="sexo" placeholder="Macho / Hembra" value={formMascota.sexo} onChange={handleChangeMascota}/>
+                </Form.Group>
+
                 <div className=" text-end mt3">
-                    <Button className="m-2" variant="danger" onClick={onClose}>
-                        Cancelar
-                    </Button>
+                    <Button className="m-2" variant="danger" onClick={onClose}>Cancelar</Button>
 
                     <Button type="submit" variant="primary">Guardar</Button>
 
