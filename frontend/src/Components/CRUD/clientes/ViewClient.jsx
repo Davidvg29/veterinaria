@@ -33,21 +33,24 @@ const ViewClient = ({ id }) => {
                     <Card.Text><strong>Dirección:</strong> {cliente.direccion}</Card.Text>
                     <Card.Text><strong>Celular:</strong> {cliente.celular}</Card.Text>
                     <Card.Text><strong>Email:</strong> {cliente.email}</Card.Text>
-
-                    {/* Aquí agregamos las mascotas */}
-                    {cliente.mascotas && cliente.mascotas.length > 0 ? (
+                    {cliente.mascotas && cliente.mascotas.length > 0 && cliente.mascotas[0].nombre !== "" ? (
                         <>
                             <hr />
                             <h5>Mascotas</h5>
                             <ul>
-                                {cliente.mascotas.map((m) => (
-                                    <li key={m.id}> <strong>{m.nombre}</strong> — {m.especie} ({m.raza}), {m.edad} años, {m.sexo}.</li>
+                            {cliente.mascotas
+                                .filter((m) => m.nombre && m.nombre.trim() !== "")
+                                .map((m) => (
+                                    <li key={m.id}>
+                                        <strong>{m.nombre}</strong> — {m.especie} ({m.raza}), {m.edad} años, {m.sexo}.
+                                    </li>
                                 ))
-                                }
+                            }
                             </ul>
                         </>
-                    ) : (<p className="mt-3"><em>Este cliente no tiene mascotas registradas.</em></p>)
-                    }
+                        ) : (
+                        <p className="mt-3"><em>Este cliente no tiene mascotas registradas.</em></p>
+                    )}
                 </Card.Body>
             </Card>
         </>
