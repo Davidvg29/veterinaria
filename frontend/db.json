@@ -145,6 +145,14 @@
           "edad": "2",
           "sexo": "macho",
           "id": 1751347753263
+        },
+        {
+          "nombre": "leo",
+          "especie": "gato",
+          "raza": "siames",
+          "edad": "2",
+          "sexo": "macho",
+          "id": 1751389125101
         }
       ]
     },
